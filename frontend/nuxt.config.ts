@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kranky&display=swap&text=717' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kranky&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.-' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap&subset=latin' },
       ],
       meta: [
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
       imgBase: '/temp/img'
     }
   },
-  css: ['~/assets/scss/global.scss'],
+  css: ['~/assets/scss/main.scss'],
   vite: {
     css: {
       preprocessorOptions: {
@@ -40,6 +40,22 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+
+  modules:[
+    '@nuxtjs/color-mode',
+    'nuxt-icon'
+  ],
+
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'light', // fallback value if not system preference found
+    // hid: 'nuxt-color-mode-script',
+    // globalName: '__NUXT_COLOR_MODE__',
+    // componentName: 'ColorScheme',
+    // classPrefix: '',
+    // classSuffix: '-mode',
+    // storageKey: 'nuxt-color-mode'
   }
 
 })

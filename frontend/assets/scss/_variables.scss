@@ -1,2 +1,28 @@
 $color-primary: salmon;
 $color-secondary: teal;
+$color-text-dark: rgba(0,0,0,0.9);
+$color-text-light: rgba(255,255,255,0.9);
+$color-bg-dark: #000;
+$color-bg-light: #fff;
+
+$font-primary: "Kranky", "Abhaya Libre", Helvetica, Arial;
+$font-secondary: "Abhaya Libre", Helvetica, Arial;
+
+.dark-mode{
+  --color-text: #{ $color-text-light };
+  --color-text-lighter: #{ darken($color-bg-light, 50%) };
+  --color-bg: #{ $color-bg-dark };
+  --color-grid-line: dimgray;
+
+  --color-btn-bg-hover: #{ lighten($color-bg-dark, 20%)};
+}
+
+.light-mode{
+  --color-text: #{ $color-text-dark };
+  --color-text-lighter: #{ lighten($color-bg-dark, 50%) };
+  --color-bg: #{ $color-bg-light };
+  --color-grid-line: lightgray;
+
+  --color-btn-bg-hover: #{ darken($color-bg-light, 10%)};
+  
+}
