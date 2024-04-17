@@ -1,3 +1,56 @@
-h1{
-  color: $color-secondary;
+.breadcrumb{
+  background-color: var(--color-bg);
+  border: var(--color-text) 1px solid;
+  padding: 10px 15px;
+  display: inline-block;
+
+  .breadcrumb_divider{
+    margin: 0 3px;
+  }
+}
+
+.brief_section{
+  height: 100vh;
+}
+
+.brief_card{
+  border: var(--color-text) 1px solid;
+  padding: 25px 15px;
+  background-color:  var(--color-bg);
+  margin-top: 100px;
+  position: relative;
+  >*:not(:last-child){
+    margin-bottom: 20px;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  p{
+    line-height: 1.5;
+
+  }
+}
+.brief_back_btn{
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-bg);
+  border: var(--color-text) 1px solid;
+  font-size: 2rem;
+  line-height: 50px;
+  position: absolute;
+  top: -40px;
+  left: -10px;
+  svg{
+    vertical-align: text-top;
+  }
+}
+
+.brief_feature{
+  font-family: $font-secondary;
+}
+
+.brief_desc::first-letter{
+  font-family: $font-secondary;
+  initial-letter: 2;
+  margin-right: 3px;
 }
