@@ -2,19 +2,30 @@ $color-primary: salmon;
 $color-secondary: teal;
 $color-text-dark: rgba(0,0,0,0.9);
 $color-text-light: rgba(255,255,255,0.9);
-$color-bg-dark: #000;
+$color-bg-dark: #222;
 $color-bg-light: #fff;
 
 $font-primary: "Kranky", "Abhaya Libre", Helvetica, Arial;
 $font-secondary: "Abhaya Libre", Helvetica, Arial;
 
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
 .dark-mode{
   --color-text: #{ $color-text-light };
   --color-text-lighter: #{ darken($color-bg-light, 50%) };
   --color-bg: #{ $color-bg-dark };
+  $color-bg: $color-bg-dark;
   --color-grid-line: dimgray;
 
   --color-btn-bg-hover: #{ lighten($color-bg-dark, 20%)};
+  --color-btn-bg-active: #{ lighten($color-bg-dark, 30%)};
 }
 
 .light-mode{
@@ -24,5 +35,35 @@ $font-secondary: "Abhaya Libre", Helvetica, Arial;
   --color-grid-line: lightgray;
 
   --color-btn-bg-hover: #{ darken($color-bg-light, 10%)};
+  --color-btn-bg-active: #{ darken($color-bg-light, 20%)};
   
+}
+
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
 }
