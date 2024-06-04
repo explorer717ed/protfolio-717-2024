@@ -1,3 +1,11 @@
+h3{
+  font-family: $font-secondary;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
 .breadcrumb{
   background-color: var(--color-bg);
   border: var(--color-text) 1px solid;
@@ -23,11 +31,11 @@
     margin-bottom: 20px;
   }
   h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
   p{
     line-height: 1.5;
-
   }
 }
 .brief_back_btn{
@@ -45,12 +53,46 @@
   }
 }
 
+.brief_card_tag{
+  position: absolute;
+  top: -40px;
+  height: 28px;
+  line-height: 28px;
+  right: -1px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid var(--color-text);
+  background-color: var(--color-bg);
+  font-family: $font-secondary;
+  padding: 5px 15px;
+}
+
 .brief_feature{
   font-family: $font-secondary;
+  .brief_feature_item{
+    line-height: 1.5;
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+    &::before{
+      content: '> ';
+      position: absolute;
+      left: 0;
+    }
+  }
 }
 
 .brief_desc::first-letter{
   font-family: $font-secondary;
   initial-letter: 2;
   margin-right: 3px;
+}
+
+.brief_tags{
+  font-size: .8rem;
+}
+
+.article_p{
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }

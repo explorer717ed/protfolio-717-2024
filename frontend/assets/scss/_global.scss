@@ -75,3 +75,12 @@ main{
 .text-center{
   text-align: center;
 }
+
+.breadcrumb{
+  max-width: calc(100% - 30px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  .breadcrumb_link{
+  }
+}

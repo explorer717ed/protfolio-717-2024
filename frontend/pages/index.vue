@@ -24,17 +24,7 @@
   </section>
   <section class="home-section-works">
     <h2>Works</h2>
-    <ul class="list-works">
-      <li v-for="work in listWork">
-        <NuxtLink :to="'/works/' + work.id">
-          <span>
-            <span class="list-subtitle">{{ work.projectScope }}</span><br>
-            <span class="list-title">{{ work.title }}</span>
-          </span>
-          <span class="list-note">{{ work.projectType }}</span>
-        </NuxtLink>
-      </li>
-    </ul>
+    <ListWork :works="listWork"></ListWork>
   </section>
   <section class="home-section-contact bg-dot">
     <div class="contact-msg text-center">
