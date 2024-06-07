@@ -1,15 +1,5 @@
 <template>
-  <div class="toolbar">
-    <button class="btn-round-icon">
-      <Icon name="ion:language-outline"/>
-    </button>
-    <button v-if="$colorMode.preference != 'dark'" @click="$colorMode.preference = 'dark'" class="btn-round-icon">
-      <Icon name="ion:moon-outline"/>
-    </button>
-    <button v-else @click="$colorMode.preference = 'light'" class="btn-round-icon">
-      <Icon name="ion:sunny-outline"/>
-    </button>
-  </div>
+  <ToolbarTop/>
   <section class="home-section-intro bg-grid">
     <h1>
       <span class="subtitle">Frontend Developer</span><br>

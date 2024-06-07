@@ -1,9 +1,15 @@
-h3{
+h2{
+  color: var(--color-text-lighter);
+}
+h3, h4{
   font-family: $font-secondary;
+  font-weight: bold;
+  line-height: 1.5;
+}
+h3{
   font-size: 1.25rem;
   margin-bottom: 5px;
   margin-top: 1rem;
-  font-weight: bold;
 }
 
 .breadcrumb{
@@ -18,7 +24,53 @@ h3{
 }
 
 .brief_section{
-  height: 100vh;
+  min-height: 100vh;
+}
+
+// .gallery{
+//   margin-top: 80px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   justify-content: space-between;
+//   gap: 10px;
+//   .img_frame{
+//     border: var(--color-text) 1px solid;
+//     padding: 10px;
+//     background-color:  var(--color-bg);
+//     &.img_frame--l{
+//       flex: 1 1 250px;
+//     }
+//     &.img_frame--s{
+//       flex: 1 1 150px;
+//     }
+//     img{
+//       width: 100%;
+//     }
+//   }
+// }
+
+.gallery{
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, auto));
+  gap: 10px;
+  grid-auto-flow: dense;
+  align-items: center;
+  justify-items: center;
+  .img_frame{
+    border: var(--color-text) 1px solid;
+    padding: 10px;
+    background-color:  var(--color-bg);
+    &.img_frame--l{
+      grid-column-end: span 2;
+    }
+    &.img_frame--s{
+    }
+    img{
+      width: 100%;
+    }
+  }
 }
 
 .brief_card{
@@ -28,7 +80,7 @@ h3{
   margin-top: 100px;
   position: relative;
   >*:not(:last-child){
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
   h1{
     font-size: 2.5rem;
@@ -43,6 +95,7 @@ h3{
   height: 50px;
   background-color: var(--color-bg);
   border: var(--color-text) 1px solid;
+  color: var(--color-text);
   font-size: 2rem;
   line-height: 50px;
   position: absolute;
@@ -95,4 +148,70 @@ h3{
 .article_p{
   line-height: 1.5;
   margin-bottom: 1rem;
+  color: var(--color-text-light);
+}
+
+.article_quote{
+  line-height: 1.5;
+  padding: 16px 35px;
+  margin-bottom: 24px;
+  background-position: -3% -5%;
+  margin-left: calc(0px - $margin-lr-sm);
+  margin-right: calc(0px - $margin-lr-sm);
+  q{
+    font-style: italic;
+    font-weight: lighter;
+  }
+  .quote_cite{
+    font-family: $font-secondary;
+    text-align: right;
+    font-size: 0.9rem;
+  }
+}
+
+.article_highlight{
+  line-height: 1.5;
+  padding: 20px 18px;
+  margin-bottom: 24px;
+  margin-left: calc(0px - $margin-lr-sm);
+  margin-right: calc(0px - $margin-lr-sm);
+
+  .highlight_p{
+    font-weight: lighter;
+    margin-bottom: 24px;
+  }
+}
+
+.p_btns{
+  text-align: center;
+  margin-top: 24px;
+  .btn{
+    margin: 10px 5px;
+  }
+}
+
+.article_divider{
+  height: 30px;
+  width: 150px;
+  margin: 35px auto;
+  background-size: 30px 30px;
+  border: none;
+  background-image: radial-gradient(circle, gray 1px, rgba(0, 0, 0, 0) 1px);
+  
+  &.article_divider--large{
+    height: 60px;
+
+  }
+}
+
+.aritcle_tags{
+  text-align: center;
+}
+
+.list_feature_desc{
+  color: var(--color-text-light);
+}
+
+.toolbar-contact{
+  text-align: center;
 }

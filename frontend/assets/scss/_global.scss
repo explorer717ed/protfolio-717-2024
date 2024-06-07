@@ -34,10 +34,13 @@ h2{
 
 main{
   section{
-    padding: 30px 15px;
+    padding: 30px $margin-lr-sm;
   }
 }
 
+a{
+  color: var(--color-text);
+}
 
 .bg-grid{
   background-size: 40px 40px;
@@ -52,24 +55,37 @@ main{
   background-image: radial-gradient(circle, gray 1px, rgba(0, 0, 0, 0) 1px);
 }
 
-.btn-round-icon{
+.btn-round-icon, .btn_primary{
   background-color: var(--color-bg);
-  width: 40px;
-  height: 40px;
   border: 1px solid var(--color-text);
   color: var(--color-text);
-  border-radius: 20px;
+  border-radius: 120px;
+  text-decoration: none;
   margin: 0 5px;
+  display: inline-block;
   svg{
     font-size: 1.5rem;
   }
 
   &:hover, &:focus{
     background-color: var(--color-btn-bg-hover);
+  }
+}
+
+.btn-round-icon{
+  width: 40px;
+  height: 40px;
+  &:hover, &:focus{
+    background-color: var(--color-btn-bg-hover);
     svg{
       transform: rotate(-15deg) scale(1.1);
     } 
   }
+}
+
+.btn_primary{
+  padding: 12px 22px;
+  font-size: .9rem;
 }
 
 .text-center{
@@ -82,5 +98,23 @@ main{
   overflow: hidden;
   text-overflow: ellipsis;
   .breadcrumb_link{
+  }
+}
+
+.list{
+  .list_item{
+    border-top: 1px solid var(--color-text);
+    position: relative;
+    padding: 24px 15px;
+    line-height: 1.5;
+    &:last-of-type{
+      border-bottom: 1px solid var(--color-text);
+    }
+
+    img{
+      max-width: 100%;
+      margin-top: 18px;
+      border: 1px solid var(--color-text);
+    }
   }
 }

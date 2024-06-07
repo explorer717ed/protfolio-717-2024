@@ -1,4 +1,5 @@
 <template>
+  <ToolbarTop/>
 <main>
   <section class="brief_section bg-dot">
     <div class="breadcrumb">
@@ -13,7 +14,7 @@
   
     <div class="brief_card">
       
-      <button @click="goBack" class="brief_back_btn"><Icon title="Go back" name="material-symbols-light:arrow-left-alt"/></button>
+      <button @click="goBack" class="brief_back_btn"><Icon title="Go back" name="material-symbols-light:arrow-back-rounded"/></button>
       <div class="brief_card_tag">Case Study</div>
       <h1>Upgrading the Information Architecture of the Ministry of Justice Website</h1>
       <ul class="brief_feature">
@@ -40,6 +41,27 @@
         </NuxtLink>
       </p>
     </div>
+
+    <div class="gallery">
+      <figure class="img_frame img_frame--l">
+        <img src="/temp/img/moj/moj1.png" alt="">
+      </figure>
+      <figure class="img_frame img_frame--s">
+        <img src="/temp/img/moj/moj2.png" alt="">
+      </figure>
+      <figure class="img_frame img_frame--s">
+        <img src="/temp/img/moj/moj5.png" alt="">
+      </figure>
+      <figure class="img_frame img_frame--s">
+        <img src="/temp/img/moj/moj4.png" alt="">
+      </figure>
+      <figure class="img_frame img_frame--s">
+        <img src="/temp/img/moj/moj6.png" alt="">
+      </figure>
+      <figure class="img_frame img_frame--l">
+        <img src="/temp/img/moj/moj3.png" alt="">
+      </figure>
+    </div>
   </section>
 
   <article>
@@ -49,6 +71,10 @@
     </section>
     <section class="article_section">
       <h2>Problems</h2>
+      <div class="article_quote bg-grid">
+        <q>I have to jump around a lot (between the website pages), and my attention is in all other places.</q>
+        <p class="quote_cite">~~ participant A</p>
+      </div>
       <p class="article_p">We conducted a comparative usability testing to identify the pros and cons in both new and old design of the ministry’s website, and the main challenges were identified as bellow:</p>
       <ul>
         <li>
@@ -76,17 +102,17 @@
     <section class="article_section">
       <h2>Solutions</h2>
       <h3>Information architecture workshop (IA Workshop)</h3>
-      <p>To find out how people categorize Family section pages and prioritize page content, the IA workshop was conducted with the participation of the Digital Channels team and policy advisors.</p>
-      <div class="bg-grid">
+      <p class="article_p">To find out how people categorize Family section pages and prioritize page content, the IA workshop was conducted with the participation of the Digital Channels team and policy advisors.</p>
+      <div class="article_highlight bg-grid full-width">
         <h4>Card sorting</h4>
-        <p>Categorize the cards with titles of web pages related to separation and divorce.</p>
+        <p class="highlight_p">Categorize the cards with titles of web pages related to separation and divorce.</p>
         <h4>Title renaming</h4>
-        <p>Ensure consistency in wording and grammar across the titles.</p>
+        <p class="highlight_p">Ensure consistency in wording and grammar across the titles.</p>
         <h4>Content rearrangement</h4>
-        <p>Rearrange the paragraphs of key pages.</p>
+        <p class="highlight_p">Rearrange the paragraphs of key pages.</p>
       </div>
 
-      <div class="article_divider"></div>
+      <hr class="article_divider"></hr>
 
       <h3>Information architecture principles : based on the IA workshop</h3>
       <ul>
@@ -104,40 +130,58 @@
         </li>
       </ul>
 
-      <div class="article_divider"></div>
+      <hr class="article_divider"></hr>
       
       <h3>Design system : built upon optimized Care of Children design</h3>
       <p class="article_p">A comprehensive design system was created by my team members Nicolette, Matias and Julia, incorporating components from the previous outsourced design of the Care of Children section.</p>
-      <button>Design System Figma</button>
-      
-      <div class="article_divider"></div>
+      <div class="p_btns">
+        <a href="https://www.figma.com/proto/arauwmGZDzv7KuQXNSxB2D/MOJ-Design-System-%26-Website-Prototype-(Copy)?page-id=2180%3A37633&node-id=2180-37635&viewport=663%2C461%2C0.02&t=zQ5eIVM2li6ysAK2-1&scaling=min-zoom&starting-point-node-id=2180%3A37635" target="_blank" rel="noopener noreferrer"
+          class="btn btn_primary"
+        >
+          Design System Figma
+          <Icon name="material-symbols-light:open-in-new-rounded"/>
+        </a>
+      </div>
+      <hr class="article_divider"></hr>
 
       <h3>Website prototype : showcasing our design system and IA principles</h3>
-      <p>
+      <p class="article_p">
         To demonstrate the usage of the design system and IA principles, we created a website prototype for the two areas within Family section: Separation & Divorce and Relationship Property. These areas were selected because they are the most visited pages according to Google Analytics.
-        <br>
+      </p>
+      <p class="article_p">
         An usability testing was conducted with our low-fidelity wireframe. Participants still found some wording hard to understand. To address this issue, we consulted with the ministry’s policy content experts and developed the guidelines of writing titles and page overviews.
       </p>
-      <button>Website Prototype Figma</button>
+      <div class="p_btns">
+        <a href="https://www.figma.com/proto/arauwmGZDzv7KuQXNSxB2D/MOJ-Design-System-%26-Website-Prototype-(Copy)?page-id=671%3A5308&node-id=665-8701&viewport=88%2C422%2C0.03&t=muI098NpwF5rRdlY-1&scaling=min-zoom&starting-point-node-id=665%3A8701&show-proto-sidebar=1" target="_blank" rel="noopener noreferrer"
+          class="btn btn_primary"
+        >
+          Website Prototype Figma
+          <Icon name="material-symbols-light:open-in-new-rounded"/>
+        </a>
+      </div>
     </section>
     <section class="article_section">
       <h2>Key Features</h2>
-      <ul>
-        <li>
-          Simplified section map: The section map was re-arranged into a simpler and more consistent structure
-          <img src="" alt="">
+      <ul class="list">
+        <li class="list_item">
+          Simplified section map:
+          <span class="list_feature_desc">The section map was re-arranged into a simpler and more consistent structure</span>
+          <img src="/temp/img/moj/simplified_structure.png" alt="Simplified section map">
         </li>
-        <li>
-          Consistent titles: The titles have been renamed into a more consistent manner while maintain the original title’s wording, ensuring minimal transition effort for returning users.
-          <img src="" alt="">
+        <li class="list_item">
+          Consistent titles:
+          <span class="list_feature_desc">The titles have been renamed into a more consistent manner while maintain the original title’s wording, ensuring minimal transition effort for returning users.</span>
+          <img src="/temp/img/moj/rename.png" alt="Consistent titles">
         </li>
-        <li>
-          Task-focused pages: The necessary information for each task was collected into a single page to avoid extra navigations for users.
-          <img src="" alt="">
+        <li class="list_item">
+          Task-focused pages:
+          <span class="list_feature_desc">The necessary information for each task was collected into a single page to avoid extra navigations for users.</span>
+          <img src="/temp/img/moj/stepper.jpg" alt="Task-focused pages">
         </li>
-        <li>
-          Self-descriptive links: Links were made more self-descriptive so that users can easily understand the destination and purposes of each link, aiding their decision on whether to click.
-          <img src="" alt="">
+        <li class="list_item">
+          Self-descriptive links:
+          <span class="list_feature_desc">Links were made more self-descriptive so that users can easily understand the destination and purposes of each link, aiding their decision on whether to click.</span>
+          <img src="/temp/img/moj/self_desc_link.png" alt="Self-descriptive links">
         </li>
       </ul>
     </section>
@@ -160,16 +204,48 @@
       </ul>
     </section>
 
-    <div class="article_divider"></div>
-    <div class="article_divider"></div>
+    <hr class="article_divider article_divider--large"></hr>
 
     <div class="aritcle_tags">
       <NuxtLink to="/work"># UX Cast Study</NuxtLink>
     </div>
-    <button>Design System Figma</button>
-    <button>Website Prototype Figma</button>
+
+    <div class="p_btns">
+      <a href="https://www.figma.com/proto/arauwmGZDzv7KuQXNSxB2D/MOJ-Design-System-%26-Website-Prototype-(Copy)?page-id=2180%3A37633&node-id=2180-37635&viewport=663%2C461%2C0.02&t=zQ5eIVM2li6ysAK2-1&scaling=min-zoom&starting-point-node-id=2180%3A37635" target="_blank" rel="noopener noreferrer"
+        class="btn btn_primary"
+      >
+        Design System Figma
+        <Icon name="material-symbols-light:open-in-new-rounded"/>
+      </a>
+      <a href="https://www.figma.com/proto/arauwmGZDzv7KuQXNSxB2D/MOJ-Design-System-%26-Website-Prototype-(Copy)?page-id=671%3A5308&node-id=665-8701&viewport=88%2C422%2C0.03&t=muI098NpwF5rRdlY-1&scaling=min-zoom&starting-point-node-id=665%3A8701&show-proto-sidebar=1" target="_blank" rel="noopener noreferrer"
+        class="btn btn_primary"
+      >
+        Website Prototype Figma
+        <Icon name="material-symbols-light:open-in-new-rounded"/>
+      </a>
+    </div>
   </article>
 
+  <div class="gallery">
+    <figure class="img_frame img_frame--l">
+      <img src="/temp/img/moj/moj9.png" alt="">
+    </figure>
+    <figure class="img_frame img_frame--s">
+      <img src="/temp/img/moj/moj8.png" alt="">
+    </figure>
+    <figure class="img_frame img_frame--s">
+      <img src="/temp/img/moj/moj11.png" alt="">
+    </figure>
+    <figure class="img_frame img_frame--l">
+      <img src="/temp/img/moj/moj10.png" alt="">
+    </figure>
+    <figure class="img_frame img_frame--s">
+      <img src="/temp/img/moj/moj7.png" alt="">
+    </figure>
+    <figure class="img_frame img_frame--s">
+      <img src="/temp/img/moj/moj12.png" alt="">
+    </figure>
+  </div>
 
   <section class="">
     <h2>More Works</h2>
