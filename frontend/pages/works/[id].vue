@@ -42,27 +42,11 @@
       </p>
     </div>
 
-    <div class="gallery">
-      <figure class="img_frame img_frame--l">
-        <img src="/temp/img/moj/moj1.png" alt="">
-      </figure>
-      <figure class="img_frame img_frame--s">
-        <img src="/temp/img/moj/moj2.png" alt="">
-      </figure>
-      <figure class="img_frame img_frame--s">
-        <img src="/temp/img/moj/moj5.png" alt="">
-      </figure>
-      <figure class="img_frame img_frame--s">
-        <img src="/temp/img/moj/moj4.png" alt="">
-      </figure>
-      <figure class="img_frame img_frame--s">
-        <img src="/temp/img/moj/moj6.png" alt="">
-      </figure>
-      <figure class="img_frame img_frame--l">
-        <img src="/temp/img/moj/moj3.png" alt="">
-      </figure>
-    </div>
   </section>
+  <Gallery
+    class="bg-dot gallery_top"
+    :imgs="listImgTop"
+  />
 
   <article>
     <section class="article_section">
@@ -226,26 +210,7 @@
     </div>
   </article>
 
-  <div class="gallery">
-    <figure class="img_frame img_frame--l">
-      <img src="/temp/img/moj/moj9.png" alt="">
-    </figure>
-    <figure class="img_frame img_frame--s">
-      <img src="/temp/img/moj/moj8.png" alt="">
-    </figure>
-    <figure class="img_frame img_frame--s">
-      <img src="/temp/img/moj/moj11.png" alt="">
-    </figure>
-    <figure class="img_frame img_frame--l">
-      <img src="/temp/img/moj/moj10.png" alt="">
-    </figure>
-    <figure class="img_frame img_frame--s">
-      <img src="/temp/img/moj/moj7.png" alt="">
-    </figure>
-    <figure class="img_frame img_frame--s">
-      <img src="/temp/img/moj/moj12.png" alt="">
-    </figure>
-  </div>
+  <Gallery class="bg-dot gallery_bottom" :imgs="listImgBottom"/>
 
   <section class="">
     <h2>More Works</h2>
@@ -288,6 +253,24 @@ const listWork = ref([
 const goBack = () => {
   router.go(-1)
 }
+
+const listImgTop = ref([
+  { url: '/temp/img/moj/moj1.png', size: 'l', alt: '' },
+  { url: '/temp/img/moj/moj2.png', size: 's', alt: '' },
+  { url: '/temp/img/moj/moj5.png', size: 's', alt: '' },
+  { url: '/temp/img/moj/moj4.png', size: 's', alt: '' },
+  { url: '/temp/img/moj/moj6.png', size: 's', alt: '' },
+  { url: '/temp/img/moj/moj3.png', size: 'l', alt: '' },
+])
+
+const listImgBottom = ref([
+  { url: '/temp/img/moj/moj9.png', size: 'l', alt: '' },
+  { url: '/temp/img/moj/moj8.png', size: 's', alt: '' },
+  { url: '/temp/img/moj/moj11.png', size: 's', alt: '' },
+  { url: '/temp/img/moj/moj10.png', size: 'l', alt: '' },
+  { url: '/temp/img/moj/moj7.png', size: 's', alt: '' },
+  { url: '/temp/img/moj/moj12.png', size: 's', alt: '' },
+])
 </script>
 
 <style lang="scss" scoped>

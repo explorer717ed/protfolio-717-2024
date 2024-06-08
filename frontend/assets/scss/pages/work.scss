@@ -1,15 +1,17 @@
-h2{
-  color: var(--color-text-lighter);
-}
-h3, h4{
-  font-family: $font-secondary;
-  font-weight: bold;
-  line-height: 1.5;
-}
-h3{
-  font-size: 1.25rem;
-  margin-bottom: 5px;
-  margin-top: 1rem;
+.article_section{
+  h2{
+    color: var(--color-text-lighter);
+  }
+  h3, h4{
+    font-family: $font-secondary;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  h3{
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    margin-top: 1rem;
+  }
 }
 
 .breadcrumb{
@@ -25,52 +27,6 @@ h3{
 
 .brief_section{
   min-height: 100vh;
-}
-
-// .gallery{
-//   margin-top: 80px;
-//   display: flex;
-//   flex-wrap: wrap;
-//   align-items: center;
-//   justify-content: space-between;
-//   gap: 10px;
-//   .img_frame{
-//     border: var(--color-text) 1px solid;
-//     padding: 10px;
-//     background-color:  var(--color-bg);
-//     &.img_frame--l{
-//       flex: 1 1 250px;
-//     }
-//     &.img_frame--s{
-//       flex: 1 1 150px;
-//     }
-//     img{
-//       width: 100%;
-//     }
-//   }
-// }
-
-.gallery{
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(120px, auto));
-  gap: 10px;
-  grid-auto-flow: dense;
-  align-items: center;
-  justify-items: center;
-  .img_frame{
-    border: var(--color-text) 1px solid;
-    padding: 10px;
-    background-color:  var(--color-bg);
-    &.img_frame--l{
-      grid-column-end: span 2;
-    }
-    &.img_frame--s{
-    }
-    img{
-      width: 100%;
-    }
-  }
 }
 
 .brief_card{
@@ -214,4 +170,13 @@ h3{
 
 .toolbar-contact{
   text-align: center;
+}
+
+.gallery_top{
+  padding-bottom: 150px;
+  padding-bottom: 250px;
+}
+.gallery_bottom{
+  padding-top: 150px;
+  padding-bottom: 200px;
 }
