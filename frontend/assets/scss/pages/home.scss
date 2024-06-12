@@ -1,5 +1,3 @@
-
-
 .home-section-intro{
   // height: calc(100vh - 60px);
   height: 100vh;
@@ -9,66 +7,8 @@
   h1{
     position: absolute;
     bottom: 30px;
-    .subtitle{
-      font-size: 1.5rem;
-      font-family: $font-secondary;
-    }
   }
-  .text717{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    color: var(--color-text);
-    text-decoration: none;
-    &::after{
-      content: '';
-      height: 100%;
-      width: 0%;
-      background-color: $color-primary;
-      opacity: .5;
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      z-index: -1;
-      transform: skew(-5deg, 0deg);
-      border-radius: 3px;
-      transition-duration: .3s;
-    }
-    
-    &:hover, &:focus{
-      &::after{
-        width: 5%;
-      }
-      .text717_text{
-        display: inline-block;
-        animation: text-shake .4s infinite;
-      }
-      svg{
-        animation: text-shake .4s infinite .2s;
-
-      }
-    }
-    &:active{
-      &::after{
-        width: 100%;
-      }
-      
-    }
-    :visited{
-      color: var(--color-text);
-    }
-
-    svg{
-      position: absolute;
-      left: 0;
-      bottom: 20px;
-      fill: var(--color-text);
-    }
-  }
-
-  .text717_text{
-    font-size: clamp( 5rem, 60cqw, 14rem);
-  }
+  
   @include lg {
     width: 33.33%;
     float: left;
@@ -124,23 +64,5 @@
       display: block;
       margin-bottom: 10px;
     }
-  }
-}
-
-@keyframes text-shake {
-  0% {
-    transform: skew(0.5deg, 0deg);
-  }
-  30% {
-    transform: skew(0deg, 0.5deg);
-  }
-  60%{
-    transform: skew(0.5deg, 0deg);
-  }
-  80% {
-    transform: skew(0deg,0deg);
-  }
-  100% {
-    transform: skew(0.5deg, 0deg);
   }
 }

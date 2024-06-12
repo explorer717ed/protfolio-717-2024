@@ -4,7 +4,7 @@ $margin-lr-sm: 16px;
   padding: 30px $margin-lr-sm;
 
   @include lg{
-    max-width: 1000px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -38,11 +38,6 @@ $margin-lr-sm: 16px;
   .breadcrumb_divider{
     margin: 0 3px;
   }
-}
-
-.brief_section{
-  // min-height: 100vh;
-  background-attachment: fixed;
 }
 
 .brief_card{
@@ -207,6 +202,20 @@ $margin-lr-sm: 16px;
 .gallery_bottom{
   padding-top: 150px;
   padding-bottom: 200px;
+  background-attachment: fixed;
+}
+
+.section_more_work{
+  h2{
+    margin: 1rem;
+  }
+  @include lg{
+    width: calc(33.33% - 1px);
+    float: left;
+    height: 90vh;
+    border-right: 1px solid var(--color-text);
+    border-top: 1px solid var(--color-text);
+  }
 }
 
 .section-contact{
@@ -215,4 +224,32 @@ $margin-lr-sm: 16px;
   font-family: $font-secondary;
   line-height: 1.5;
   font-size: 1.25rem;
+  @include lg{
+    border-top: 1px solid var(--color-text);
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 66.66%;
+    float: left;
+    height: 90vh;
+    position: relative;
+    .contact-msg{
+      display: none;
+    }
+
+    .toolbar-contact{
+      position: absolute;
+      width: 40px;
+      right: 15px;
+      bottom: 250px;
+      button{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.link_about{
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
 }

@@ -199,18 +199,21 @@
 
   <Gallery class="bg-dot gallery_bottom" :imgs="listImgBottom"/>
 
-  <section>
+  <section class="section_more_work">
     <h2>More Works</h2>
     <ListWork :works="listWork"></ListWork>
   </section>
   <section class="section-contact bg-dot">
+    <div class="link_about">
+      <Text717/>
+    </div>
     <div class="contact-msg text-center">
       Drop me a line and discuss new projects~ <br>
       ✧◝(⁰▿⁰)◜✧ <br>
     </div>
     <div class="toolbar-contact">
       <button class="btn-round-icon">
-        <Icon name="ion:mail-outline"/>
+        <Icon name="material-symbols-light:mail-outline-rounded"/>
       </button>
       <button class="btn-round-icon">
         <Icon name="ion:social-linkedin-outline"/>
