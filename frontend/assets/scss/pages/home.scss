@@ -1,9 +1,11 @@
 
 
 .home-section-intro{
-  height: calc(100vh - 60px);
+  // height: calc(100vh - 60px);
+  height: 100vh;
   min-height: 500px;
   position: relative;
+  container-type: inline-size;
   h1{
     position: absolute;
     bottom: 30px;
@@ -13,7 +15,6 @@
     }
   }
   .text717{
-    font-size: clamp( 5rem, 55vw,14rem);
     position: relative;
     display: inline-block;
     width: 100%;
@@ -58,7 +59,6 @@
     }
 
     svg{
-      // width: 14rem;
       position: absolute;
       left: 0;
       bottom: 20px;
@@ -66,9 +66,11 @@
     }
   }
 
+  .text717_text{
+    font-size: clamp( 5rem, 60cqw, 14rem);
+  }
   @include lg {
-    width: calc(33.33% - 30px) ;
-    // width: 33.33%;
+    width: 33.33%;
     float: left;
   }
 }
@@ -78,14 +80,18 @@
   border-style: solid;
   border-top-width: 1px;
   padding-bottom: 0;
+  h2{
+    margin: 1rem;
+  }
   @include lg {
-    width: calc(33.33% - 32px);
+    width: calc(33.33% - 2px);
+    // width: 33.33%;
     float: left;
     border-left-width: 1px;
     border-right-width: 1px;
     border-top-width: 0px;
     
-    height: calc(100vh - 30px);
+    height: 100vh;
   }
 }
 
@@ -94,7 +100,7 @@
   padding-bottom: 80px;
   @include lg {
     padding: 0;
-    width: calc(33.33%);
+    width: 33.33%;
     float: left;
     height: calc(100vh);
   }

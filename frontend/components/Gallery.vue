@@ -3,6 +3,7 @@
   ref="elGallery"
   class="gallery"
 >
+{{ info }}
   <div
     class="gallery_inner"
     :style="{
@@ -43,7 +44,6 @@ const getOffset = () => {
   
   info.offsetTop = elGallery.value.offsetTop
   info.offsetHeight = elGallery.value.offsetHeight
-  console.log('offset', info);
 }
 
 const getScrollTop = () => {
@@ -55,13 +55,13 @@ const getScrollTop = () => {
 
 const scrollRatio = computed(()=>{
 
-  if(info.scrollTop < (info.offsetTop - info.screenHeight / 2)) return 1
+  const startPoint = info.offsetTop - (info.screenHeight / 2)
+  if(info.scrollTop < startPoint) return 1
 
-  let diff =  info.scrollTop - (info.offsetTop - (info.screenHeight / 2))
-  let ratio = diff / (info.offsetHeight * 2)
-  console.log('ratio', ratio);
+  let diff =  info.scrollTop - startPoint
+  let ratio = diff / (info.screenHeight * 2)
   
-  if(ratio > 1) return 1
+  if(ratio > 1) return (info.offsetHeight / (info.screenHeight * 2)) / 2 + 1
   else return (ratio / 2) + 1
 
 })
@@ -127,6 +127,12 @@ onMounted(()=>{
     img{
       width: 100%;
     }
+  }
+
+
+  @include lg {
+    grid-template-columns: repeat(4, minmax(120px, auto));
+    
   }
 }
 

@@ -1,7 +1,6 @@
 <template>
   <ToolbarTop/>
-<main>
-  <section class="brief_section bg-dot">
+  <div class="bg-dot">
     <div class="breadcrumb">
       <span class="breadcrumb_link">
         <NuxtLink to="/">Home</NuxtLink>
@@ -11,44 +10,47 @@
       <span class="breadcrumb_divider">/</span>
       <span class="breadcrumb_link">Upgrading the Information Architecture of the Ministry of Justice Website</span>
     </div>
+    <section class="page_content brief_section">
+    
+      <div class="brief_card">
+        
+        <button @click="goBack" class="brief_back_btn"><Icon title="Go back" name="material-symbols-light:arrow-back-rounded"/></button>
+        <div class="brief_card_tag">Case Study</div>
+        <h1>Upgrading the Information Architecture of the Ministry of Justice Website</h1>
+        <ul class="brief_feature">
+          <li class="brief_feature_item">
+            My role: <br>
+            Research, Analysis, Workshop Hosting, Website Design, Usability Testing
+          </li>
+          <li class="brief_feature_item">
+            Timeline: <br>
+            March - May, 2024
+          </li>
+          <li class="brief_feature_item">
+            Scope: <br>
+            User Experience Design
+          </li>
+        </ul>
+        <!-- <p class="brief_desc">
+          A freelance project implementing Three.js. A freelance project implementing Three.js. A freelance project implementing Three.js. A freelance project implementing Three.js. A freelance project implementing Three.js. A freelance project implementing Three.js. A freelance project implementing Three.js.
+        </p> -->
+    
+        <p class="brief_tags">
+          <NuxtLink to="/work">
+            #UX Case Study
+          </NuxtLink>
+        </p>
+      </div>
   
-    <div class="brief_card">
-      
-      <button @click="goBack" class="brief_back_btn"><Icon title="Go back" name="material-symbols-light:arrow-back-rounded"/></button>
-      <div class="brief_card_tag">Case Study</div>
-      <h1>Upgrading the Information Architecture of the Ministry of Justice Website</h1>
-      <ul class="brief_feature">
-        <li class="brief_feature_item">
-          My role: <br>
-          Research, Analysis, Workshop Hosting, Website Design, Usability Testing
-        </li>
-        <li class="brief_feature_item">
-          Timeline: <br>
-          March - May, 2024
-        </li>
-        <li class="brief_feature_item">
-          Scope: <br>
-          User Experience Design
-        </li>
-      </ul>
-      <!-- <p class="brief_desc">
-        A freelance project implementing Three.js. A freelance project implementing Three.js. A freelance project implementing Three.js. A freelance project implementing Three.js. A freelance project implementing Three.js. A freelance project implementing Three.js. A freelance project implementing Three.js.
-      </p> -->
-  
-      <p class="brief_tags">
-        <NuxtLink to="/work">
-          #UX Case Study
-        </NuxtLink>
-      </p>
-    </div>
+    </section>
 
-  </section>
+  </div>
   <Gallery
     class="bg-dot gallery_top"
     :imgs="listImgTop"
   />
 
-  <article>
+  <article class="page_content">
     <section class="article_section">
       <h2>Background</h2>
       <p class="article_p">In the university’s Capstone project, our client was the Digital Channels team of the Ministry of Justice. They recently completed the redesign and development of the “Care of Children” area within Family section of the ministry’s website. Because the redesign was outsourced, the Digital Channels team was eager to learn the strategies for extending the new design to the entire Family section, including applying the new visual style and reorganizing the web page structure.</p>
@@ -101,15 +103,15 @@
       <h3>Information architecture principles : based on the IA workshop</h3>
       <ul>
         <li>
-          <h3>Categorize by tasks</h3>
+          <h4>Categorize by tasks</h4>
           <p class="article_p">Organize the pages by grouping relevant tasks together, making it easier for users to find the information they need based on the task they want to accomplish.</p>
         </li>
         <li>
-          <h3>Consistency</h3>
+          <h4>Consistency</h4>
           <p class="article_p">Make sure the consistency in the titles and contents across all pages, helping users understand and navigate the website more easily.</p>
         </li>
         <li>
-          <h3>Focus the user on the task</h3>
+          <h4>Focus the user on the task</h4>
           <p class="article_p">Ensure all relevant information for task completion is on a single page, eliminating the need to navigate to additional pages for supplementary information.</p>
         </li>
       </ul>
@@ -148,22 +150,22 @@
       <h2>Key Features</h2>
       <ul class="list">
         <li class="list_item">
-          Simplified section map:
+          <h3 class="list_item_title">Simplified section map:</h3>
           <span class="list_feature_desc">The section map was re-arranged into a simpler and more consistent structure</span>
           <img src="/temp/img/moj/simplified_structure.png" alt="Simplified section map">
         </li>
         <li class="list_item">
-          Consistent titles:
+          <h3 class="list_item_title">Consistent titles:</h3>
           <span class="list_feature_desc">The titles have been renamed into a more consistent manner while maintain the original title’s wording, ensuring minimal transition effort for returning users.</span>
           <img src="/temp/img/moj/rename.png" alt="Consistent titles">
         </li>
         <li class="list_item">
-          Task-focused pages:
+          <h3 class="list_item_title">Task-focused pages:</h3>
           <span class="list_feature_desc">The necessary information for each task was collected into a single page to avoid extra navigations for users.</span>
           <img src="/temp/img/moj/stepper.jpg" alt="Task-focused pages">
         </li>
         <li class="list_item">
-          Self-descriptive links:
+          <h3 class="list_item_title">Self-descriptive links:</h3>
           <span class="list_feature_desc">Links were made more self-descriptive so that users can easily understand the destination and purposes of each link, aiding their decision on whether to click.</span>
           <img src="/temp/img/moj/self_desc_link.png" alt="Self-descriptive links">
         </li>
@@ -212,11 +214,11 @@
 
   <Gallery class="bg-dot gallery_bottom" :imgs="listImgBottom"/>
 
-  <section class="">
+  <section>
     <h2>More Works</h2>
     <ListWork :works="listWork"></ListWork>
   </section>
-  <section class="home-section-contact bg-dot">
+  <section class="section-contact bg-dot">
     <div class="contact-msg text-center">
       Drop me a line and discuss new projects~ <br>
       ✧◝(⁰▿⁰)◜✧ <br>
@@ -230,7 +232,6 @@
       </button>      
     </div>
   </section>
-</main>
 </template>
 
 <script lang="ts" setup>

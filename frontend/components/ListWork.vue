@@ -30,7 +30,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .list_work{
-  margin: 0 -15px;
+  margin: 0;
   li{
     padding: 0;
     overflow: hidden;
@@ -39,7 +39,7 @@ defineProps({
     display: flex;
     justify-content: space-between;
     align-items: last baseline;
-    margin: 24px 15px;
+    padding: 24px 15px;
     text-decoration: none;
     color: var(--color-text);
     overflow-x: hidden;

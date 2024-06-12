@@ -1,4 +1,17 @@
+
+$margin-lr-sm: 16px;
+.page_content{
+  padding: 30px $margin-lr-sm;
+
+  @include lg{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .article_section{
+  margin-bottom: 70px;
   h2{
     color: var(--color-text-lighter);
   }
@@ -19,6 +32,8 @@
   border: var(--color-text) 1px solid;
   padding: 10px 15px;
   display: inline-block;
+  margin: 15px;
+  max-width: calc(100% - 180px) ;
 
   .breadcrumb_divider{
     margin: 0 3px;
@@ -26,7 +41,8 @@
 }
 
 .brief_section{
-  min-height: 100vh;
+  // min-height: 100vh;
+  background-attachment: fixed;
 }
 
 .brief_card{
@@ -44,6 +60,13 @@
   }
   p{
     line-height: 1.5;
+  }
+
+
+  @include lg {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .brief_back_btn{
@@ -168,15 +191,28 @@
   color: var(--color-text-light);
 }
 
+.list_item .list_item_title{
+  margin: 0;
+}
+
 .toolbar-contact{
   text-align: center;
 }
 
 .gallery_top{
-  padding-bottom: 150px;
+  padding-top: 150px;
   padding-bottom: 250px;
+  background-attachment: fixed;
 }
 .gallery_bottom{
   padding-top: 150px;
   padding-bottom: 200px;
+}
+
+.section-contact{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-family: $font-secondary;
+  line-height: 1.5;
+  font-size: 1.25rem;
 }
