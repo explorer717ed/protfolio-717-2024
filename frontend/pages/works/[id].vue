@@ -149,25 +149,10 @@
     <section class="article_section">
       <h2>Key Features</h2>
       <ul class="list">
-        <li class="list_item">
-          <h3 class="list_item_title">Simplified section map:</h3>
-          <span class="list_feature_desc">The section map was re-arranged into a simpler and more consistent structure</span>
-          <img src="/temp/img/moj/simplified_structure.png" alt="Simplified section map">
-        </li>
-        <li class="list_item">
-          <h3 class="list_item_title">Consistent titles:</h3>
-          <span class="list_feature_desc">The titles have been renamed into a more consistent manner while maintain the original title’s wording, ensuring minimal transition effort for returning users.</span>
-          <img src="/temp/img/moj/rename.png" alt="Consistent titles">
-        </li>
-        <li class="list_item">
-          <h3 class="list_item_title">Task-focused pages:</h3>
-          <span class="list_feature_desc">The necessary information for each task was collected into a single page to avoid extra navigations for users.</span>
-          <img src="/temp/img/moj/stepper.jpg" alt="Task-focused pages">
-        </li>
-        <li class="list_item">
-          <h3 class="list_item_title">Self-descriptive links:</h3>
-          <span class="list_feature_desc">Links were made more self-descriptive so that users can easily understand the destination and purposes of each link, aiding their decision on whether to click.</span>
-          <img src="/temp/img/moj/self_desc_link.png" alt="Self-descriptive links">
+        <li v-for="feat in listFeatures" class="list_item">
+          <h3 class="list_item_title">{{ feat.title }}:</h3>
+          <p class="list_feature_desc">{{ feat.desc }}</p>
+          <ImgExpand :src="feat.imgSrc" :alt="feat.imgAlt"/>
         </li>
       </ul>
     </section>
@@ -271,6 +256,39 @@ const listImgBottom = ref([
   { url: '/temp/img/moj/moj10.png', size: 'l', alt: '' },
   { url: '/temp/img/moj/moj7.png', size: 's', alt: '' },
   { url: '/temp/img/moj/moj12.png', size: 's', alt: '' },
+])
+
+const listFeatures = ref([
+  { 
+    title: "Simplified section map",
+    desc: "The section map was re-arranged into a simpler and more consistent structure",
+    imgSrc: "/temp/img/moj/simplified_structure.png",
+    imgAlt: "Simplified section map"
+  },
+  { 
+    title: "Simplified section map",
+    desc: "The section map was re-arranged into a simpler and more consistent structure",
+    imgSrc: "/temp/img/moj/simplified_structure.png",
+    imgAlt: "Simplified section map"
+  },
+  { 
+    title: "Consistent titles",
+    desc: "The titles have been renamed into a more consistent manner while maintain the original title’s wording, ensuring minimal transition effort for returning users.",
+    imgSrc: "/temp/img/moj/rename.png",
+    imgAlt: "Consistent titles"
+  },
+  { 
+    title: "Task-focused pages",
+    desc: "The necessary information for each task was collected into a single page to avoid extra navigations for users.",
+    imgSrc: "/temp/img/moj/stepper.jpg",
+    imgAlt: "Task-focused pages"
+  },
+  { 
+    title: "Self-descriptive links",
+    desc: "Links were made more self-descriptive so that users can easily understand the destination and purposes of each link, aiding their decision on whether to click.",
+    imgSrc: "/temp/img/moj/self_desc_link.png",
+    imgAlt: "Self-descriptive links"
+  },
 ])
 </script>
 

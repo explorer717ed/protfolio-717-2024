@@ -3,7 +3,6 @@
   ref="elGallery"
   class="gallery"
 >
-{{ info }}
   <div
     class="gallery_inner"
     :style="{
@@ -42,7 +41,17 @@ const info = reactive({
 const getOffset = () => {
   if(!elGallery.value) return
   
-  info.offsetTop = elGallery.value.offsetTop
+  const box = elGallery.value.getBoundingClientRect();
+  const body = document.body;
+  const docEl = document.documentElement;
+
+  const scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+
+  const clientTop = docEl.clientTop || body.clientTop || 0;
+
+  const top  = box.top +  scrollTop - clientTop;
+  
+  info.offsetTop = top
   info.offsetHeight = elGallery.value.offsetHeight
 }
 
