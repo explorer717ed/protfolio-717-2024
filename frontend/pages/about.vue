@@ -1,10 +1,70 @@
 <template>
-  <h1>About</h1>
+  <ToolbarTop/>
+  <div class="bg-grid">
+
+    <div class="breadcrumb">
+      <span class="breadcrumb_link">
+        <NuxtLink to="/">Home</NuxtLink>
+      </span>
+      <span class="breadcrumb_divider">/</span>
+      <span class="breadcrumb_link">About</span>
+    </div>
+    <section class="about-self page_content mt_about">
+      <h1>
+        <span class="self_greet">Hello~ I’m</span><br>
+        <span class="self_name">717</span>
+        <span class="self_emoji"> (*’ｰ’*)</span>
+      </h1>
+      <div class="self_photo mt_about">
+        <img class="self_photo_img" src="~/assets/img/photo_717.png" alt="A very cute self-portrait.">
+      </div>
+      <p class="self_role mt_about">
+        / Frontend Developer<br>
+        / UX Designer<br>
+        / UI Designer<br>
+        / Backend Developer
+      </p>
+      <h2 class="about_p_title mt_about">
+        Currently based in
+        <span class="about_from_tw">Taiwan</span> New Zealand.
+      </h2>
+      <h2 class="about_p_title mt_about">Front end Develop</h2>
+      <p class="about_comtent">
+        Mainly using Vue.js + Typescript...
+      </p>
+      <h2 class="about_p_title mt_about">UX / UI Design</h2>
+      <p class="about_comtent">
+        UX research, interview and workshop experience. Using Figma to design prototypes.
+      </p>
+      <h2 class="about_p_title mt_about">Back end Develop</h2>
+      <p class="about_comtent">
+        Having basic knowledge on PHP, Node.js, MySQL, and system analysis.
+      </p>
+    </section>
+    <section class="section_contact mt_about">
+      <ContactMsg/>
+    </section>
+    <section class="section_works mt_about">
+      <h2 class="section_works_title">Works</h2>
+      <ListWork :works="listWork"></ListWork>
+    </section>
+    <section class="mt_about pb_about">
+      <ContactMsg/>
+    </section>
+  </div>
 
 </template>
 
 <script lang="ts" setup>
 
+const listWork = ref([
+  { id: 'kronos-research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend' },
+  { id: 'three-js-journey-design-system', title: 'Three.js Journey Design System', projectType: 'Personal', projectScope: 'UX' },
+  { id: 'gary-tu', title: 'Gary Tu', projectType: 'Freelance', projectScope: 'Frontend' },
+  { id: 'epa-opendata', title: 'EPA Opendata', projectType: 'Blueplanet Inc. Project', projectScope: 'Frontend' },
+  { id: 'fragment', title: 'Fragment', projectType: 'Personal', projectScope: 'Frontend' },
+
+])
 </script>
 
 <style lang="scss" scoped>

@@ -207,7 +207,7 @@
     <div class="link_about">
       <Text717/>
     </div>
-    <div class="contact-msg text-center">
+    <div class="contact-msg text--center">
       Drop me a line and discuss new projects~ <br>
       ✧◝(⁰▿⁰)◜✧ <br>
     </div>

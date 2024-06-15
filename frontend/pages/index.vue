@@ -18,7 +18,7 @@
     <ListWork :works="listWork"></ListWork>
   </section>
   <section class="home-section-contact bg-dot">
-    <div class="contact-msg text-center">
+    <div class="contact-msg text--center">
       Drop me a line and discuss new projects~ <br>
       ✧◝(⁰▿⁰)◜✧ <br>
     </div>

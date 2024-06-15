@@ -67,6 +67,20 @@ a{
   }
 }
 
+
+.breadcrumb{
+  background-color: var(--color-bg);
+  border: var(--color-text) 1px solid;
+  padding: 10px 15px;
+  display: inline-block;
+  margin: 15px;
+
+  .breadcrumb_divider{
+    margin: 0 3px;
+  }
+}
+
+
 .btn-round-icon{
   width: 40px;
   height: 40px;
@@ -83,7 +97,7 @@ a{
   font-size: .9rem;
 }
 
-.text-center{
+.text--center{
   text-align: center;
 }
 

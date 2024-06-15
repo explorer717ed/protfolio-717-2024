@@ -28,16 +28,7 @@ $margin-lr-sm: 16px;
 }
 
 .breadcrumb{
-  background-color: var(--color-bg);
-  border: var(--color-text) 1px solid;
-  padding: 10px 15px;
-  display: inline-block;
-  margin: 15px;
-  max-width: calc(100% - 180px) ;
-
-  .breadcrumb_divider{
-    margin: 0 3px;
-  }
+  max-width: calc(100% - 180px);
 }
 
 .brief_card{
@@ -221,9 +212,6 @@ $margin-lr-sm: 16px;
 .section-contact{
   padding-top: 80px;
   padding-bottom: 80px;
-  font-family: $font-secondary;
-  line-height: 1.5;
-  font-size: 1.25rem;
   @include lg{
     border-top: 1px solid var(--color-text);
     padding-top: 0;
