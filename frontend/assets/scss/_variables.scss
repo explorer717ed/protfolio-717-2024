@@ -23,7 +23,7 @@ $screen-xl-min: 1200px;
   --color-text-light: #{ darken($color-bg-light, 40%) };
   --color-text-lighter: #{ darken($color-bg-light, 50%) };
   --color-bg: #{ $color-bg-dark };
-  --color-grid-line: rgb(105, 105, 105);
+  --color-grid-line: rgb(95, 95, 95);
 
   --color-btn-bg-hover: #{ lighten($color-bg-dark, 20%)};
   --color-btn-bg-active: #{ lighten($color-bg-dark, 30%)};

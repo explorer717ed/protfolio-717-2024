@@ -23,7 +23,6 @@ $margin-lr-lg: 32px;
 
   .about-self{
     margin-top: 40px;
-    contain: layout inline-size;
     width: calc(100% - var(--mlr)*2);
   }
   .self_greet{
@@ -100,6 +99,10 @@ $margin-lr-lg: 32px;
 
   }
 
+  .section_contact{
+    padding-bottom: 60px;
+  }
+
 
   @include lg{
     --mlr: #{$margin-lr-lg};
@@ -121,7 +124,7 @@ $margin-lr-lg: 32px;
 
 .section_works{
   background: var(--color-bg);
-  margin: 50px 0;
+  margin-bottom: 50px;
   
   .works_title{
     padding: 30px 15px;

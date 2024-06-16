@@ -41,7 +41,6 @@ const getOffset = () => {
   if(!elImg.value) return
   
   const box = elImg.value.getBoundingClientRect();
-  console.log(box.height);
   
   info.height = box.height
   const body = document.body;
@@ -70,8 +69,6 @@ const scale = computed(()=>{
   
   const ratio = ((info.scrollTop - startPoint) / info.screenHeight )
   if(ratio < 1){
-    console.log(info.height);
-    
     info.boxHeight = info.height * ratio
     return ratio
   }

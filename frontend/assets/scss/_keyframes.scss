@@ -16,3 +16,13 @@
     transform: skew(0.5deg, 0deg);
   }
 }
+
+
+@keyframes swing {
+  0% { transform: rotate(-30deg); }
+  10% { transform: rotate(-40deg); }
+  20% { transform: rotate(-30deg); }
+  30% { transform: rotate(-40deg); }
+  40% { transform: rotate(-30deg); }
+  100% { transform: rotate(-30deg); }
+}

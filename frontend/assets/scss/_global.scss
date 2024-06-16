@@ -72,17 +72,8 @@ a{
 }
 
 
-.breadcrumb{
-  background-color: var(--color-bg);
-  border: var(--color-text) 1px solid;
-  padding: 10px 15px;
-  display: inline-block;
-  margin: 15px;
 
-  .breadcrumb_divider{
-    margin: 0 3px;
-  }
-}
+
 
 
 .btn-round-icon{
@@ -103,15 +94,6 @@ a{
 
 .text--center{
   text-align: center;
-}
-
-.breadcrumb{
-  max-width: calc(100% - 30px);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  .breadcrumb_link{
-  }
 }
 
 .list{

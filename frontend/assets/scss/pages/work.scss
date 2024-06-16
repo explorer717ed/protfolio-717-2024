@@ -220,24 +220,31 @@ $margin-lr-sm: 16px;
     float: left;
     height: 90vh;
     position: relative;
-    .contact-msg{
-      display: none;
-    }
-
-    .toolbar-contact{
-      position: absolute;
-      width: 40px;
-      right: 15px;
-      bottom: 250px;
-      button{
-        margin-bottom: 10px;
-      }
-    }
   }
 }
 
 .link_about{
-  position: absolute;
-  bottom: 30px;
-  right: 10px;
+  margin-bottom: 80px;
+}
+
+@include lg{
+  .section-contact{
+    position: relative;
+  }
+  .link_about{
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    margin-bottom: 0;
+  }
+
+  .contact-wrap{
+    position: absolute;
+    top: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+
 }

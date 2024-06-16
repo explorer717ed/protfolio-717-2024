@@ -1,14 +1,10 @@
 <template>
   <ToolbarTop class="about_toolbar_top"/>
   <div class="bg-grid page_about">
+    <Breadcrumb
+      :paths="[{ label: 'Home', to: '/'}, { label: 'About' }]"
+    />
 
-    <div class="breadcrumb">
-      <span class="breadcrumb_link">
-        <NuxtLink to="/">Home</NuxtLink>
-      </span>
-      <span class="breadcrumb_divider">/</span>
-      <span class="breadcrumb_link">About</span>
-    </div>
     <section class="about-self page_content mt_about">
       <h1 class="self_intro">
         <span class="self_greet">Hello~ I’m</span><br>
@@ -49,9 +45,7 @@
   <section class="section_works">
     <h2 class="works_title">Works</h2>
     <ListWork :works="listWork" class="works_list"></ListWork>
-    <div class="wrap_contact">
-      <ContactMsg/>
-    </div>
+    <ContactMsg class="wrap_contact"/>
   </section>
 
 </template>

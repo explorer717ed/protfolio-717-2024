@@ -1,7 +1,8 @@
 <template>
   <ToolbarTop/>
   <div class="bg-dot">
-    <div class="breadcrumb">
+    <Breadcrumb :paths="linksBreadcrumb" max-width="calc(100% - 180px)"/>
+    <!-- <div class="breadcrumb">
       <span class="breadcrumb_link">
         <NuxtLink to="/">Home</NuxtLink>
       </span>
@@ -9,7 +10,7 @@
       <span class="breadcrumb_link">Works</span>
       <span class="breadcrumb_divider">/</span>
       <span class="breadcrumb_link">Upgrading the Information Architecture of the Ministry of Justice Website</span>
-    </div>
+    </div> -->
     <section class="page_content brief_section">
     
       <div class="brief_card">
@@ -207,18 +208,7 @@
     <div class="link_about">
       <Text717/>
     </div>
-    <div class="contact-msg text--center">
-      Drop me a line and discuss new projects~ <br>
-      ✧◝(⁰▿⁰)◜✧ <br>
-    </div>
-    <div class="toolbar-contact">
-      <button class="btn-round-icon">
-        <Icon name="material-symbols-light:mail-outline-rounded"/>
-      </button>
-      <button class="btn-round-icon">
-        <Icon name="ion:social-linkedin-outline"/>
-      </button>      
-    </div>
+    <ContactMsg class="contact-wrap"/>
   </section>
 </template>
 
@@ -229,6 +219,12 @@ useHead({
 })
 
 const router = useRouter()
+
+const linksBreadcrumb = ref([
+  { label: 'Home', to: '/' },
+  { label: 'Works' },
+  { label: 'Upgrading the Information Architecture of the Ministry of Justice Website' }
+])
 
 
 const listWork = ref([
