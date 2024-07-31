@@ -2,7 +2,7 @@
   <div>
     <h2 class="works_title">{{ title }}</h2>
   
-    <ul class="list list_work">
+    <ul ref="elWorkList" class="list list_work">
       <li v-for="work in listWork" class="list_item" :previewImgUrl="work.imgUrl">
         <NuxtLink :to="'/works/' + work.id" class="">
           <span>
@@ -39,12 +39,12 @@ const listWork = ref([
 
 ])
 
+const elWorkList = ref()
+
 onMounted(()=>{
   if(props.preview){
-    const menuEl = document.querySelector('.list');
-    new Menu(menuEl);
+    new Menu(elWorkList.value);
   }
-
 })
 </script>
 

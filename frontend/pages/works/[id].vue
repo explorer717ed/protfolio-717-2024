@@ -201,9 +201,9 @@
   <Gallery class="bg-dot gallery_bottom" :imgs="listImgBottom"/>
 
   <section class="section_more_work">
-    <ListWork :works="listWork" title="More Works"></ListWork>
+    <ListWork :preview="true" title="More Works"></ListWork>
   </section>
-  <section class="section-contact bg-dot">
+  <section class="section-contact bg-dot previewArea">
     <div class="link_about">
       <Text717/>
     </div>

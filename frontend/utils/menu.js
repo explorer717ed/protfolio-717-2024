@@ -7,7 +7,6 @@ export default class Menu {
         this.DOM = {el: el};
         // the menu item elements (<a>)
         this.DOM.menuItems = this.DOM.el.querySelectorAll('.list_item');
-        console.log(this.DOM.menuItems[1].getAttribute('previewImgUrl'));
         // menu item properties that will animate as we move the mouse around the menu
         // we will be using interpolation to achieve smooth animations. 
         // the “previous” and “current” values are the values to interpolate. 
@@ -25,6 +24,7 @@ export default class Menu {
         };
         // array of MenuItem instances
         this.menuItems = [];
+        console.log('??');
         // initialize the MenuItems
         [...this.DOM.menuItems].forEach((item, pos) => this.menuItems.push(new MenuItem(item, item.getAttribute('previewImgUrl'), this.animatableProperties)));
         // show the menu items (initial animation where each menu item gets revealed)
