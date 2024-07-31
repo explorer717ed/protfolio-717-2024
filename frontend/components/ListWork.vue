@@ -1,41 +1,57 @@
 <template>
-
-  <ul class="list list_work">
-    <li v-for="work in works" class="list_item" :previewImgUrl="work.imgUrl">
-      <NuxtLink :to="'/works/' + work.id" class="">
-        <span>
-          <span class="item_subtitle">{{ work.projectScope }}</span><br>
-          <span class="item_title">{{ work.title }}</span>
-        </span>
-        <span class="item_note">{{ work.projectType }}</span>
-      </NuxtLink>
-    </li>
-  </ul>
+  <div>
+    <h2 class="works_title">{{ title }}</h2>
+  
+    <ul class="list list_work">
+      <li v-for="work in listWork" class="list_item" :previewImgUrl="work.imgUrl">
+        <NuxtLink :to="'/works/' + work.id" class="">
+          <span>
+            <span class="item_subtitle">{{ work.projectScope }}</span><br>
+            <span class="item_title">{{ work.title }}</span>
+          </span>
+          <span class="item_note">{{ work.projectType }}</span>
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import Menu from '~/utils/menu';
 
-defineProps({
-  works:{
-    type: Array as PropType<{
-      id: string,
-      projectScope: string,
-      title: string,
-      projectType: string,
-      imgUrl?: string
-    }[]>
+const props = defineProps({
+  preview: {
+    default: false
+  },
+  title: {
+    default: 'Works'
   }
 })
 
+
+const listWork = ref([
+  { id: 'moj', title: 'Upgrading the Information Architecture of the Ministry of Justice Website', projectType: 'Student', projectScope: 'UX', imgUrl: '/temp/img/moj/moj1.png' },
+  { id: 'kronos-research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend', imgUrl: '/temp/img/kronos/kronos_home.png' },
+  { id: 'three-js-journey-design-system', title: 'Three.js Journey Design System', projectType: 'Personal', projectScope: 'UX' },
+  { id: 'gary-tu', title: 'Gary Tu', projectType: 'Freelance', projectScope: 'Frontend' },
+  { id: 'epa-opendata', title: 'EPA Opendata', projectType: 'Blueplanet Inc. Project', projectScope: 'Frontend' },
+  { id: 'fragment', title: 'Fragment', projectType: 'Personal', projectScope: 'Frontend' },
+
+])
+
 onMounted(()=>{
-  const menuEl = document.querySelector('.list');
-  new Menu(menuEl);
+  if(props.preview){
+    const menuEl = document.querySelector('.list');
+    new Menu(menuEl);
+  }
 
 })
 </script>
 
 <style lang="scss" scoped>
+.works_title{
+  margin: 1rem;
+}
 .list_work{
   margin: 0;
   li{
@@ -53,27 +69,27 @@ onMounted(()=>{
     &:visited{
       color: var(--color-text);
     }
-    &::after {
-      content: "";
-      position: absolute;
-      top: -3px;
-      left: -3px;
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      border: 3px solid var(--color-grid-line);
-      opacity: 0;
-      z-index: -1;
-      transform: scaleX(1.1) scaleY(1.2);
-      transition: transform 0.3s, opacity 0.3s;
-    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: -3px;
+    //   left: -3px;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: transparent;
+    //   border: 3px solid var(--color-grid-line);
+    //   opacity: 0;
+    //   z-index: -1;
+    //   transform: scaleX(1.1) scaleY(1.2);
+    //   transition: transform 0.3s, opacity 0.3s;
+    // }
     &:hover{
       background-color: var(--color-btn-bg-hover);
     }
-    &:hover::after, &:focus::after {
-      opacity: 1;
-      transform: scaleX(1) scaleY(1);
-    }
+    // &:hover::after, &:focus::after {
+    //   opacity: 1;
+    //   transform: scaleX(1) scaleY(1);
+    // }
   }
 
   .item_title{
@@ -89,6 +105,11 @@ onMounted(()=>{
   .item_note{
     color: var( --color-text-lighter);
     font-size: .9rem;
+  }
+
+  @include lg{
+    overflow-y: auto;
+    max-height: calc(100vh - 5rem);
   }
 }
 </style>

@@ -126,16 +126,16 @@ $margin-lr-lg: 32px;
   background: var(--color-bg);
   margin-bottom: 50px;
   
-  .works_title{
-    padding: 30px 15px;
-    margin: 0;
-    // margin: 1rem;
-    border-top: 1px solid var(--color-text-lighter);
-  }
+  // .works_title{
+  //   padding: 30px 15px;
+  //   margin: 0;
+  //   // margin: 1rem;
+  //   border-top: 1px solid var(--color-text-lighter);
+  // }
   
-  .works_list{
-    margin-bottom: 50px;
-  }
+  // .works_list{
+  //   margin-bottom: 50px;
+  // }
   @include lg{
     float: right;
     width: 33.33%;
@@ -144,7 +144,7 @@ $margin-lr-lg: 32px;
     height: 100vh;
     position: fixed;
     right: 0;
-    overflow: auto;
+    // overflow: auto;
     .works_title{
       border-top: none;
     }

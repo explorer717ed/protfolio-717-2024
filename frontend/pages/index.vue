@@ -14,9 +14,8 @@
     </h1>
   </section>
   <section class="home-section-works">
-    <h2>Works</h2>
     <ListWork
-      :works="listWork"
+      :preview="true"
     ></ListWork>
   </section>
   <section class="home-section-contact bg-dot previewArea">
@@ -38,15 +37,6 @@
 <script lang="ts" setup>
 
 
-const listWork = ref([
-  { id: 'moj', title: 'Upgrading the Information Architecture of the Ministry of Justice Website', projectType: 'Student', projectScope: 'UX', imgUrl: '/temp/img/moj/moj1.png' },
-  { id: 'kronos-research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend', imgUrl: '/temp/img/kronos/kronos_home.png' },
-  { id: 'three-js-journey-design-system', title: 'Three.js Journey Design System', projectType: 'Personal', projectScope: 'UX' },
-  { id: 'gary-tu', title: 'Gary Tu', projectType: 'Freelance', projectScope: 'Frontend' },
-  { id: 'epa-opendata', title: 'EPA Opendata', projectType: 'Blueplanet Inc. Project', projectScope: 'Frontend' },
-  { id: 'fragment', title: 'Fragment', projectType: 'Personal', projectScope: 'Frontend' },
-
-])
 </script>
 
 <style lang="scss" scoped>

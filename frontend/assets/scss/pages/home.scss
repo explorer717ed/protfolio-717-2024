@@ -19,9 +19,6 @@
   border-style: solid;
   border-top-width: 1px;
   padding-bottom: 0;
-  h2{
-    margin: 1rem;
-  }
   @include lg {
     width: calc(33.33% - 2px);
     // width: 33.33%;

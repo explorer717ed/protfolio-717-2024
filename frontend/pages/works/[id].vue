@@ -201,8 +201,7 @@
   <Gallery class="bg-dot gallery_bottom" :imgs="listImgBottom"/>
 
   <section class="section_more_work">
-    <h2>More Works</h2>
-    <ListWork :works="listWork"></ListWork>
+    <ListWork :works="listWork" title="More Works"></ListWork>
   </section>
   <section class="section-contact bg-dot">
     <div class="link_about">

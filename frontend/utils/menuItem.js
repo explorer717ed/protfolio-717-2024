@@ -30,9 +30,6 @@ if(window) window.addEventListener('mousemove', ev => mousepos = getMousePos(ev)
 
 export default class MenuItem {
     constructor(el, imgUrl, animatableProperties) {
-        this.config = {
-            offsetX: 300
-        }
         // el is the <a> with class "menu__item"
         this.DOM = {el: el};
         // position in the Menu

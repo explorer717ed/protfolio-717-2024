@@ -43,7 +43,6 @@
     </section>
   </div>
   <section class="section_works">
-    <h2 class="works_title">Works</h2>
     <ListWork :works="listWork" class="works_list"></ListWork>
     <ContactMsg class="wrap_contact"/>
   </section>
