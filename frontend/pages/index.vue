@@ -15,9 +15,11 @@
   </section>
   <section class="home-section-works">
     <h2>Works</h2>
-    <ListWork :works="listWork"></ListWork>
+    <ListWork
+      :works="listWork"
+    ></ListWork>
   </section>
-  <section class="home-section-contact bg-dot">
+  <section class="home-section-contact bg-dot previewArea">
     <div class="contact-msg text--center">
       Drop me a line and discuss new projects~ <br>
       ✧◝(⁰▿⁰)◜✧ <br>
@@ -37,7 +39,8 @@
 
 
 const listWork = ref([
-  { id: 'kronos-research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend' },
+  { id: 'moj', title: 'Upgrading the Information Architecture of the Ministry of Justice Website', projectType: 'Student', projectScope: 'UX', imgUrl: '/temp/img/moj/moj1.png' },
+  { id: 'kronos-research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend', imgUrl: '/temp/img/kronos/kronos_home.png' },
   { id: 'three-js-journey-design-system', title: 'Three.js Journey Design System', projectType: 'Personal', projectScope: 'UX' },
   { id: 'gary-tu', title: 'Gary Tu', projectType: 'Freelance', projectScope: 'Frontend' },
   { id: 'epa-opendata', title: 'EPA Opendata', projectType: 'Blueplanet Inc. Project', projectScope: 'Frontend' },

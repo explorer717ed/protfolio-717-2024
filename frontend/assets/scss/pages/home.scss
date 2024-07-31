@@ -37,11 +37,13 @@
 .home-section-contact{
   padding-top: 80px;
   padding-bottom: 80px;
+  position: relative;
   @include lg {
     padding: 0;
     width: 33.33%;
     float: left;
     height: calc(100vh);
+    overflow: hidden;
   }
 }
 .contact-msg{

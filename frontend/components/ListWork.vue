@@ -1,8 +1,8 @@
 <template>
 
   <ul class="list list_work">
-    <li v-for="work in works" class="list_item">
-      <NuxtLink :to="'/works/' + work.id">
+    <li v-for="work in works" class="list_item" :previewImgUrl="work.imgUrl">
+      <NuxtLink :to="'/works/' + work.id" class="">
         <span>
           <span class="item_subtitle">{{ work.projectScope }}</span><br>
           <span class="item_title">{{ work.title }}</span>
@@ -14,6 +14,7 @@
 </template>
 
 <script lang="ts" setup>
+import Menu from '~/utils/menu';
 
 defineProps({
   works:{
@@ -22,10 +23,16 @@ defineProps({
       projectScope: string,
       title: string,
       projectType: string,
+      imgUrl?: string
     }[]>
   }
 })
 
+onMounted(()=>{
+  const menuEl = document.querySelector('.list');
+  new Menu(menuEl);
+
+})
 </script>
 
 <style lang="scss" scoped>
@@ -33,7 +40,7 @@ defineProps({
   margin: 0;
   li{
     padding: 0;
-    overflow: hidden;
+    // overflow: hidden;
   }
   a{
     display: flex;
