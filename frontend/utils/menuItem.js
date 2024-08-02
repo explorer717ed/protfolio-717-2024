@@ -185,7 +185,7 @@ export default class MenuItem {
 
         // new translation values
         // the center of the image element is positioned where the mouse is
-        this.animatableProperties.tx.current = Math.abs(mousepos.x - this.bounds.el.left) ;
+        this.animatableProperties.tx.current = Math.abs(mousepos.x - this.bounds.el.left ) ;
         this.animatableProperties.ty.current = Math.abs(mousepos.y - this.bounds.el.height) ;
         // new rotation value
         this.animatableProperties.rotation.current = this.firstRAFCycle ? 0 : map(mouseDistanceX,0,100,0,direction.x < 0 ? 60 : -60);
@@ -204,8 +204,7 @@ export default class MenuItem {
         // set styles
         gsap.set(this.DOM.reveal, {
             // x: this.bounds.el.width + this.animatableProperties.tx.previous*0.4,
-            x: this.animatableProperties.tx.previous*0.4,
-            // x: this.config.offsetX,
+            x: this.animatableProperties.tx.previous*0.3,
             y: this.animatableProperties.ty.previous,
             scale: 1 + (this.animatableProperties.tx.previous / this.bounds.el.width) * 0.5,
             rotation: this.animatableProperties.rotation.previous,

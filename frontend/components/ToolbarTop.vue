@@ -21,6 +21,6 @@
   position: absolute;
   right: 15px;
   top: 15px;
-  z-index: 1;
+  z-index: 50;
 }
 </style>

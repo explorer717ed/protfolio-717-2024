@@ -24,7 +24,6 @@ export default class Menu {
         };
         // array of MenuItem instances
         this.menuItems = [];
-        console.log('??');
         // initialize the MenuItems
         [...this.DOM.menuItems].forEach((item, pos) => this.menuItems.push(new MenuItem(item, item.getAttribute('previewImgUrl'), this.animatableProperties)));
         // show the menu items (initial animation where each menu item gets revealed)

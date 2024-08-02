@@ -17,6 +17,8 @@ $screen-lg-min: 992px;
 // Large tablets and desktops
 $screen-xl-min: 1200px;
 
+$shadow-block: 1px 1px 2px var(--color-text-lighter);
+
 
 .dark-mode{
   --color-text: #{ $color-text-light };

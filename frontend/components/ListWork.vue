@@ -18,6 +18,7 @@
 
 <script lang="ts" setup>
 import Menu from '~/utils/menu';
+import { workList } from "~/utils/data";
 
 const props = defineProps({
   preview: {
@@ -29,15 +30,7 @@ const props = defineProps({
 })
 
 
-const listWork = ref([
-  { id: 'moj', title: 'Upgrading the Information Architecture of the Ministry of Justice Website', projectType: 'Student', projectScope: 'UX', imgUrl: '/temp/img/moj/moj1.png' },
-  { id: 'kronos-research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend', imgUrl: '/temp/img/kronos/kronos_home.png' },
-  { id: 'three-js-journey-design-system', title: 'Three.js Journey Design System', projectType: 'Personal', projectScope: 'UX' },
-  { id: 'gary-tu', title: 'Gary Tu', projectType: 'Freelance', projectScope: 'Frontend' },
-  { id: 'epa-opendata', title: 'EPA Opendata', projectType: 'Blueplanet Inc. Project', projectScope: 'Frontend' },
-  { id: 'fragment', title: 'Fragment', projectType: 'Personal', projectScope: 'Frontend' },
-
-])
+const listWork = ref(workList)
 
 const elWorkList = ref()
 
