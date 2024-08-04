@@ -20,7 +20,7 @@
         </p>
     
         <p class="brief_tags">
-          <NuxtLink v-for="tag in article?.tags" to="/work">
+          <NuxtLink v-for="tag in article?.tags">
             # {{ tag }}
           </NuxtLink>
         </p>
@@ -92,7 +92,7 @@
     <hr class="article_divider article_divider--large"></hr>
 
     <div class="aritcle_tags">
-      <NuxtLink v-for="tag in article?.tags" to="/work"># {{ tag }}</NuxtLink>
+      <NuxtLink v-for="tag in article?.tags"># {{ tag }}</NuxtLink>
     </div>
 
     <div class="p_btns">
@@ -107,7 +107,7 @@
     </div>
   </article>
 
-  <Gallery class="bg-dot gallery_bottom" :imgs="article?.gallery_bottom"/>
+  <Gallery v-if="article?.gallery_bottom" class="bg-dot gallery_bottom" :imgs="article?.gallery_bottom"/>
 
   <section class="section_more_work">
     <ListWork :preview="true" title="More Works"></ListWork>

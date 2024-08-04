@@ -35,6 +35,9 @@ export default class MenuItem {
         // position in the Menu
         if(!imgUrl) return
         this.imgUrl = imgUrl;
+        // preload
+        const img = new Image();
+        img.src = this.imgUrl;
         // menu item properties that will animate as we move the mouse around the menu
         this.animatableProperties = animatableProperties;
         // the item text

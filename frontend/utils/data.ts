@@ -1,17 +1,14 @@
 export const workList = [
+  { id: 'Kronos_Research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend', imgUrl: '/temp/img/kronos/kronos_home.png' },
   { id: 'Upgrading_the_Information_Architecture_of_the_Ministry_of_Justice', title: 'Upgrading the Information Architecture of the Ministry of Justice Website', projectType: 'Student', projectScope: 'UX', imgUrl: '/temp/img/moj/moj1.png' },
-  { id: 'kronos_research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend', imgUrl: '/temp/img/kronos/kronos_home.png' },
-  { id: 'three_js_journey_design_system', title: 'Three.js Journey Design System', projectType: 'Personal', projectScope: 'UX' },
-  { id: 'gary_tu', title: 'Gary Tu', projectType: 'Freelance', projectScope: 'Frontend' },
-  { id: 'epa_opendata', title: 'EPA Opendata', projectType: 'Blueplanet Inc. Project', projectScope: 'Frontend' },
-  { id: 'fragment', title: 'Fragment', projectType: 'Personal', projectScope: 'Frontend' },
+  { id: 'Environmental_Information_Open_Platform_and_CMS', title: 'Environmental Information Open Platform', projectType: 'Blueplanet Inc. Project', projectScope: 'Frontend', imgUrl: '/temp/img/epa/epa_home.png' },
 ]
 
 export const worksDetail: Work[] = [
   {
     id: 'Upgrading_the_Information_Architecture_of_the_Ministry_of_Justice',
     title: 'Upgrading the Information Architecture of the Ministry of Justice Website',
-    category: 'Case Study',
+    category: 'UX',
     metadata: [
       { label: 'My role', content: 'Research, Analysis, Workshop Hosting, Website Design, Usability Testing' },
       { label: 'Timeline', content: 'March - May, 2024' },
@@ -119,6 +116,76 @@ export const worksDetail: Work[] = [
       { type: 'primary', label: 'Website Prototype Figma', icon: 'material-symbols-light:open-in-new-rounded', href: 'https://www.figma.com/proto/arauwmGZDzv7KuQXNSxB2D/MOJ-Design-System-%26-Website-Prototype-(Copy)?page-id=671%3A5308&node-id=665-8701&viewport=88%2C422%2C0.03&t=muI098NpwF5rRdlY-1&scaling=min-zoom&starting-point-node-id=665%3A8701&show-proto-sidebar=1' },
     ],
   },
+  {
+    id: 'Kronos_Research',
+    title: "Kronos Research",
+    category: "Front-end",
+    abstract: "This freelance front-end project was a collaboration with the design company Brand Aspects. It utilized Nuxt 3 framework and incorporated 3D effects using Three.js.",
+    metadata: [
+      { label: "Project Timeline and Team", content: "2023-2024. A team consisting of a project manager, designers, a front-end developer, and a back-end developer." },
+      { label: "My Role", content: "Front-end development of the official website, writing API specification." },
+      { label: "Techniques", content: "Nuxt3, Three.js, GSAP, TypeScript." },
+    ],
+    tags: [ "Web3D" ],
+    gallery_top: [
+      { url: '/temp/img/kronos/kronos_home.png', size: 's', alt: '' },
+      { url: '/temp/img/kronos/kronos_news.png', size: 's', alt: '' },
+      { url: '/temp/img/kronos/kronos_mile.png', size: 's', alt: '' },
+      { url: '/temp/img/kronos/kronos_mile_s.png', size: 's', alt: '' },
+      { url: '/temp/img/kronos/kronos_particle_s.png', size: 's', alt: '' },
+      { url: '/temp/img/kronos/kronos_life.png', size: 's', alt: '' },
+      { url: '/temp/img/kronos/kronos_career.png', size: 's', alt: '' },
+      { url: '/temp/img/kronos/kronos_select.png', size: 's', alt: '' },
+    ],
+    article_blocks: [
+      [
+        { type: "heading1", content: 'Key Features' },
+        { type: "heading2", content: 'Background distortion' },
+        { type: "image", content: 'credits: Daniel Velasquez', img_url: '/temp/img/moj/simplified_structure.png', alt: 'Simplified section map' },
+        { type: "heading2", content: 'Earth and location pin' },
+        { type: "image", content: 'credits: GhostCatcg', img_url: '/temp/img/moj/simplified_structure.png', alt: 'Simplified section map' },
+        { type: "heading2", content: 'Particle blob animation' },
+        { type: "image", content: 'credits: Eli Fitch', img_url: '/temp/img/moj/simplified_structure.png', alt: 'Simplified section map' },
+      ]
+    ],
+    related_links: [
+      { label: "Launch Website", href: "", type: "primary", icon: "material-symbols-light:open-in-new-rounded" },
+    ]
+  },
+  {
+    id: "Environmental_Information_Open_Platform_and_CMS",
+    title: "Environmental Information Open Platform and CMS",
+    category: "Front-end",
+    abstract: "While working at BluePlanet Inc., our team developed an open data system. As the front-end developer, I was responsible for building the website with Nuxt2 and its content management system (CMS) with Vue2, ensuring accessibility and fetching API data for both the website and the CMS.",
+    metadata: [
+      { label: "Project Timeline and Team", content: "2021 - 2022. A team consisting of project managers, designers, front-end developers, and back-end developers."},
+      { label: "My Role", content: "Front-end development of the platform and its CMS."},
+      { label: "Techniques", content: "Nuxt2, Vue2, TypeScript, A11y" }
+    ],
+    tags: [ "A11y", "CMS" ],
+    gallery_top: [
+      { url: '/temp/img/epa/epa_search.png', size: 's', alt: '' },
+      { url: '/temp/img/epa/epa_ranking.png', size: 's', alt: '' },
+      { url: '/temp/img/epa/epa_home.png', size: 's', alt: '' },
+      { url: '/temp/img/epa/epa_detail.png', size: 's', alt: '' },
+      { url: '/temp/img/epa/epa_category.png', size: 's', alt: '' },
+      { url: '/temp/img/epa/bpgcms.png', size: 's', alt: '' },
+    ],
+    article_blocks: [
+      [
+        { type: "heading1", content: 'Key Features' },
+        { type: "heading2", content: 'Search and filter' },
+        { type: "image", content: 'Flexible search and filter interface allow users to find target dataset by keywords, categories, tag, etc.', img_url: '/temp/img/epa/epa_search.png', alt: 'search screen' },
+        { type: "heading2", content: 'Accessibility' },
+        { type: "image", content: 'The platform has level AA web content accessibility, enabling the usage of keyboards and screen readers.', img_url: '/temp/img/epa/epa_sitemap.png', alt: 'sitemap' },
+        { type: "heading2", content: 'Content management system' },
+        { type: "image", content: 'The CMS is based on BluePlanet General Content Management System(BPGCMS). BPGCMS allows effective developing with the modularized components. It also ensures the usability and consistency.', img_url: '/temp/img/epa/bpgcms.png', alt: 'bpgcms' },
+      ]
+    ],
+    related_links: [
+      { label: "Launch Website", href: "https://data.moenv.gov.tw/en", type: "primary", icon: "material-symbols-light:open-in-new-rounded" },
+    ]
+  }
 ]
 
 export interface Work {
@@ -129,9 +196,9 @@ export interface Work {
   metadata: Metadatum[];
   tags: string[];
   gallery_top: Gallery[];
-  gallery_bottom: Gallery[];
+  gallery_bottom?: Gallery[];
   article_blocks: Articleblock[][];
-  related_links: Button[];
+  related_links?: Button[];
 }
 
 interface Articleblock {
@@ -147,9 +214,9 @@ interface Content {
 }
 
 interface Button {
-  type: string;
+  type: "primary";
   label: string;
-  icon: string;
+  icon: "material-symbols-light:open-in-new-rounded";
   href: string;
 }
 
