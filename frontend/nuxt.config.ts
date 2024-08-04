@@ -1,6 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  nitro: {
+    firebase: {
+      gen: 2,
+      httpsOptions: {
+        region: 'australia-southeast1',
+        maxInstances: 3,
+      },
+    }
+  },
   app: {
     head: {
       htmlAttrs: {
