@@ -10,8 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@types/imagesloaded": "^4.1.6",
     "firebase-functions": "^5.0.1",
     "gsap": "^3.12.5",
+    "imagesloaded": "^5.0.0",
     "nuxt": "^3.11.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"

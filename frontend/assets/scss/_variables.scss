@@ -19,6 +19,20 @@ $screen-xl-min: 1200px;
 
 $shadow-block: 1px 1px 2px var(--color-text-lighter);
 
+:root {
+	--color-text-alt: hsl(1deg 69% 50%);
+	--color-link: #000;
+	--color-link-hover: #000;
+	/* Column/item variables */
+	--ratio: 0.75; 				/* image ratio */
+	--justify: center;	/* spread columns or center */
+	--gap: 2.5vw;				/* column gap and margin for items */
+	--rotation: 0deg;			/* section rotation */
+	--radius: 0px;				/* image border radius */
+	--offset: -30vh;			/* offset of even columns */
+	/* content section */
+	--radius-small: 4px; 		/* border radius of small images */
+}
 
 .dark-mode{
   --color-text: #{ $color-text-light };

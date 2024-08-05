@@ -3,10 +3,10 @@
   <button class="btn-round-icon">
     <Icon name="material-symbols-light:language"/>
   </button>
-  <button v-if="$colorMode.preference != 'dark'" @click="$colorMode.preference = 'dark'" class="btn-round-icon">
+  <button v-show="$colorMode.preference != 'dark'" @click="$colorMode.preference = 'dark'" class="btn-round-icon">
     <Icon name="material-symbols-light:nightlight-outline-rounded"/>
   </button>
-  <button v-else @click="$colorMode.preference = 'light'" class="btn-round-icon">
+  <button v-show="$colorMode.preference != 'light'" @click="$colorMode.preference = 'light'" class="btn-round-icon">
     <Icon name="material-symbols-light:sunny-outline-rounded"/>
   </button>
 </div>

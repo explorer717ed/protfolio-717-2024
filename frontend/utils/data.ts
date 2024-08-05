@@ -1,6 +1,6 @@
 export const workList = [
   { id: 'Kronos_Research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend', imgUrl: '/temp/img/kronos/kronos_home.png' },
-  { id: 'Upgrading_the_Information_Architecture_of_the_Ministry_of_Justice', title: 'Upgrading the Information Architecture of the Ministry of Justice Website', projectType: 'Student', projectScope: 'UX', imgUrl: '/temp/img/moj/moj1.png' },
+  { id: 'Upgrading_the_Information_Architecture_of_the_Ministry_of_Justice', title: 'Upgrading the Information Architecture of the Ministry of Justice Website', projectType: 'Master Degree', projectScope: 'UX', imgUrl: '/temp/img/moj/moj1.png' },
   { id: 'Environmental_Information_Open_Platform_and_CMS', title: 'Environmental Information Open Platform', projectType: 'Blueplanet Inc. Project', projectScope: 'Frontend', imgUrl: '/temp/img/epa/epa_home.png' },
 ]
 
@@ -31,6 +31,18 @@ export const worksDetail: Work[] = [
       { url: '/temp/img/moj/moj10.png', size: 'l', alt: '' },
       { url: '/temp/img/moj/moj7.png', size: 's', alt: '' },
       { url: '/temp/img/moj/moj12.png', size: 's', alt: '' },
+    ],
+    gallery: [
+      { url: '/temp/img/moj/moj1.png', alt: '' },
+      { url: '/temp/img/moj/moj2.png', alt: '' },
+      { url: '/temp/img/moj/moj5.png', alt: '' },
+      { url: '/temp/img/moj/moj4.png', alt: '' },
+      { url: '/temp/img/moj/moj6.png', alt: '' },
+      { url: '/temp/img/moj/moj3.png', alt: '' },
+      { url: '/temp/img/moj/moj9.png', alt: '' },
+      { url: '/temp/img/moj/moj8.png', alt: '' },
+      { url: '/temp/img/moj/moj11.png', alt: '' },
+      { url: '/temp/img/moj/moj10.png', alt: '' },
     ],
     article_blocks:[
       [
@@ -137,6 +149,18 @@ export const worksDetail: Work[] = [
       { url: '/temp/img/kronos/kronos_career.png', size: 's', alt: '' },
       { url: '/temp/img/kronos/kronos_select.png', size: 's', alt: '' },
     ],
+    gallery: [
+      { url: '/temp/img/kronos/kronos_home.png', alt: '' },
+      { url: '/temp/img/kronos/kronos_news.png', alt: '' },
+      { url: '/temp/img/kronos/kronos_mile.png', alt: '' },
+      { url: '/temp/img/kronos/kronos_mile_s.png', alt: '' },
+      { url: '/temp/img/kronos/kronos_particle_s.png', alt: '' },
+      { url: '/temp/img/kronos/kronos_life.png', alt: '' },
+      { url: '/temp/img/kronos/kronos_career.png', alt: '' },
+      { url: '/temp/img/kronos/kronos_select.png', alt: '' },
+      { url: '/temp/img/kronos/kronos_card.png', alt: '' },
+      { url: '/temp/img/kronos/kronos_figure.png', alt: '' },
+    ],
     article_blocks: [
       [
         { type: "heading1", content: 'Key Features' },
@@ -171,6 +195,18 @@ export const worksDetail: Work[] = [
       { url: '/temp/img/epa/epa_category.png', size: 's', alt: '' },
       { url: '/temp/img/epa/bpgcms.png', size: 's', alt: '' },
     ],
+    gallery: [
+      { url: '/temp/img/epa/epa_ranking.png', alt: '' },
+      { url: '/temp/img/epa/epa_home.png', alt: '' },
+      { url: '/temp/img/epa/epa_detail.png', alt: '' },
+      { url: '/temp/img/epa/epa_category.png', alt: '' },
+      { url: '/temp/img/epa/epa_api.png', alt: '' },
+      { url: '/temp/img/epa/epa_search.png', alt: '' },
+      { url: '/temp/img/epa/epa_list.png', alt: '' },
+      { url: '/temp/img/epa/epa_meta.png', alt: '' },
+      { url: '/temp/img/epa/epa_qa.png', alt: '' },
+      { url: '/temp/img/epa/bpgcms.png', alt: '' },
+    ],
     article_blocks: [
       [
         { type: "heading1", content: 'Key Features' },
@@ -197,6 +233,7 @@ export interface Work {
   tags: string[];
   gallery_top: Gallery[];
   gallery_bottom?: Gallery[];
+  gallery: { url: string, alt?: string }[]
   article_blocks: Articleblock[][];
   related_links?: Button[];
 }
