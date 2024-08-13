@@ -54,7 +54,7 @@ onMounted(()=>{
   a{
     display: flex;
     justify-content: space-between;
-    align-items: last baseline;
+    align-items: center;
     padding: 24px 15px;
     text-decoration: none;
     color: var(--color-text);
@@ -98,6 +98,7 @@ onMounted(()=>{
   .item_note{
     color: var( --color-text-lighter);
     font-size: .9rem;
+    padding-left: 10px;
   }
 
   @include lg{

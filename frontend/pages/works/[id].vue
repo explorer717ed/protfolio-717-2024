@@ -1,6 +1,6 @@
 <template>
   <ToolbarTop/>
-  <div class="bg-dot">
+  <div class="bg-dot work_top">
     <Breadcrumb :paths="linksBreadcrumb" max-width="calc(100% - 180px)"/>
 
 
@@ -62,24 +62,26 @@
     </section>
     <section class="page_content brief_section">
       <div class="brief_card">
-        <button @click="goBack" class="brief_back_btn"><Icon title="Go back" name="material-symbols-light:arrow-back-rounded"/></button>
-        <div class="brief_card_tag">{{ article?.category }}</div>
-        <h1>{{ article?.title }}</h1>
-        <ul class="brief_feature">
-          <li v-for="item in article.metadata" class="brief_feature_item">
-            {{ item.label }}: <br>
-            {{ item.content }}
-          </li>
-        </ul>
-        <p class="brief_desc">
-          {{ article?.abstract}}
-        </p>
-    
-        <p class="brief_tags">
-          <NuxtLink v-for="tag in article?.tags">
-            # {{ tag }}
-          </NuxtLink>
-        </p>
+        <button @click="goBack" class="brief_back_btn parallax"  data-depth='2'><Icon title="Go back" name="material-symbols-light:arrow-back-rounded"/></button>
+        <div class="brief_card_tag parallax"  data-depth='1'>{{ article?.category }}</div>
+        <div class="brief_card-content parallax"  data-depth='1.5'>
+          <h1>{{ article?.title }}</h1>
+          <ul class="brief_feature">
+            <li v-for="item in article.metadata" class="brief_feature_item">
+              {{ item.label }}: <br>
+              {{ item.content }}
+            </li>
+          </ul>
+          <p class="brief_desc">
+            {{ article?.abstract}}
+          </p>
+      
+          <p class="brief_tags">
+            <NuxtLink v-for="tag in article?.tags">
+              # {{ tag }}
+            </NuxtLink>
+          </p>
+        </div>
       </div>
   
     </section>
@@ -104,7 +106,7 @@
     <article class="page_content" id="work_article">
       
       <section v-for="section in article?.article_blocks" class="article_section">
-        <template v-for="block in section">
+        <template v-for="(block, i) in section">
           <h2 v-if="block.type === 'heading1'" :id="underscoreWord(block.content)" class="article_section-heading1">{{ block.content }}</h2>
           <div v-else-if="block.type === 'paragraph'" class="article_p" v-html="block.content"></div>
           <div v-else-if="block.type === 'card'" class="article_card bg-grid" v-html="block.content"></div>
@@ -130,6 +132,17 @@
             <div class="image_block-content article_p" v-html="block.content"></div>
             <div class="image_block-image_frame">
               <img class="image_block-image" :src="block.img_url" :alt="block.alt">
+            </div>
+            <div class="clear_fix"></div>
+          </div>
+          <div v-else-if="['video', 'image'].includes(block.type)" class="article-image_block">
+            <h3 class="article_section-heading2">{{ block.heading }}</h3>
+            <div class="image_block-content article_p" v-html="block.content"></div>
+            <div class="image_block-image_frame">
+              <div class="image_block-image_wrap">
+                <video v-if="block.type === 'video'" class="image_block-image" :src="block.video_url" :controls="false" autoplay muted loop ></video>
+                <img v-else-if="block.type === 'image'" class="image_block-image" :src="block.img_url" :alt="block.alt">
+              </div>
             </div>
             <div class="clear_fix"></div>
           </div>
@@ -232,22 +245,12 @@ const goTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-
-onMounted(()=>{
-
-
-  ScrollTrigger.create({
-    trigger: "#work_article",
-    start: "top top", 
-    end: "bottom 350px",
-    pin: ".article_anchor-wrap",
-    
-  });
+const animateGallery = () => {
 
   const DOM = {
     sections: {
-        columns: document.querySelector('.section--columns'),
-        showcase: document.querySelector('#work_article'),
+      columns: document.querySelector('.section--columns'),
+      showcase: document.querySelector('#work_article'),
     },
     columns: document.querySelectorAll('.section--columns > .columns'),
     columnWraps: document.querySelectorAll('.section--columns .column-wrap'),
@@ -256,63 +259,128 @@ onMounted(()=>{
     images: document.querySelectorAll('.section--columns .column__item-img'),
   }
   // GSAP Scroll Triggers
-      gsap.timeline({
-          scrollTrigger: {
-              start: 0,
-              end: 'max',
-              scrub: true
-          }
-      })
-      .addLabel('start', 0)
-      .to(DOM.sections.columns, {
-          ease: 'none',
-          startAt: {scale: .7},
-          scale: 1,
-      }, 'start')
-      .to(DOM.sections.columns, {
-          scrollTrigger: {
-              trigger: DOM.sections.showcase,
-              start: 0,
-              end: 'top top',
-              scrub: true
-          },
-          ease: 'power4.inOut',
-          startAt: {
-              opacity: 0,
-          },
-          opacity: 1,
-          // repeat once (go back to "startAt" values)
-          yoyo: true,
-          repeat: 1
-      }, 'start')
-      .to(DOM.images, {
-          ease: 'none',
-          scale: 1.7,
-      }, 'start')
+  gsap.timeline({
+    scrollTrigger: {
+      start: 0,
+      end: 'max',
+      scrub: true
+    }
+  })
+  .addLabel('start', 0)
+  .to(DOM.sections.columns, {
+    ease: 'none',
+    startAt: {scale: .7},
+    scale: 1,
+  }, 'start')
+  .to(DOM.sections.columns, {
+    scrollTrigger: {
+      trigger: DOM.sections.showcase,
+      start: 0,
+      end: 'top top',
+      scrub: true
+    },
+    ease: 'power4.inOut',
+    startAt: {
+      opacity: 0,
+    },
+    opacity: 1,
+    // repeat once (go back to "startAt" values)
+    // yoyo: true,
+    // repeat: 1
+  }, 'start')
+  .to(DOM.images, {
+    ease: 'none',
+    scale: 1.7,
+  }, 'start')
+  .to(DOM.items, {
+    scrollTrigger: {
+      trigger: DOM.sections.showcase,
+      start: 0,
+      end: 'top bottom',
+      scrub: true
+    },
+    startAt: {
+      x: (pos, target) => {
+        return getTranslationDistance(target, 400)['x'];
+      },
+      y: (pos, target) => {
+        return getTranslationDistance(target, 600)['y'];
+      }
+    },
+    ease: 'none',
+    x: (pos, target) => {
+      return getTranslationDistance(target, 100)['x'];
+    },
+    y: 0
+  }, 'start')
+  .to(DOM.sections.columns, {
+    scrollTrigger: {
+      trigger: DOM.sections.showcase,
+      start: 'top top',
+      scrub: true
+    },
+    ease: 'power4.inOut',
+    opacity: 0,
+  })
+}
 
-      .to(DOM.items, {
-          scrollTrigger: {
-              trigger: DOM.sections.showcase,
-              start: 0,
-              end: 'top bottom',
-              scrub: true
-          },
-          startAt: {
-            x: (pos, target) => {
-                    return getTranslationDistance(target, 400)['x'];
-                },
-                y: (pos, target) => {
-                    return getTranslationDistance(target, 600)['y'];
-                },
-              
-          },
-          ease: 'none',
-          x:0,
-          y:0
-      }, 'start')
+const animateDepth = () => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "main",
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+
+  gsap.utils.toArray(".parallax").forEach(layer => {
+    const depth = layer.dataset.depth;
+    const movement = -(layer.offsetHeight * depth)
+    tl.to(layer, {y: movement, ease: "none"}, 0)
+  });
+}
+
+const animateImg = () => {
+  const DOM = {
+    blocks: document.querySelectorAll('.article-image_block'),
+  }
+
+  // GSAP Scroll Triggers
+  DOM.blocks.forEach(block => {
+    const imgWrap = block.querySelector('.image_block-image_wrap')
+    const media = block.querySelector('.image_block-image')
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: block,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+      }
+    })
+    .to(media, {
+      scale: 1.1
+    })
+  })
+}
 
 
 
+onMounted(()=>{
+  console.log('mounted');
+  
+
+  ScrollTrigger.create({
+    trigger: "#work_article",
+    start: "top top", 
+    end: "bottom 25%",
+    pin: ".article_anchor-wrap",
+    // markers: true,
+  });
+
+  animateGallery()
+  animateDepth()
+  animateImg()
 })
 </script>
 
@@ -353,7 +421,6 @@ onMounted(()=>{
 	height: 100%;
 	transform: rotate(var(--rotation));
 	align-items: center;
-	// will-change: transform, opacity;
 }
 
 .column-wrap {
@@ -362,7 +429,6 @@ onMounted(()=>{
 	display: flex;
 	flex-direction: column;
 	padding: 5vh 0 15vh;
-	// will-change: transform;
 }
 
 .column-wrap:nth-child(even) {
@@ -372,20 +438,19 @@ onMounted(()=>{
 .column {
 	position: relative;
 	display: block;
-	// will-change: transform;
 }
 
 .column__item {
   --grid-item-width: 70vw;
 	--grid-item-height: calc(var(--grid-item-width) * var(--ratio));
 	width: var(--grid-item-width);
-	height: var(--grid-item-height);
+  outline: 1px solid var(--color-text);
+  border: 10px solid var(--color-bg);
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;
 	margin: 0 0 var(--gap) 0;
 	z-index: 1;
-	// will-change: transform, filter;
 }
 
 
@@ -394,7 +459,6 @@ onMounted(()=>{
 	// height: 100%;
 	background-size: cover;
 	background-position: 50% 50%;
-	// will-change: transform;
 }
 
 @include lg{

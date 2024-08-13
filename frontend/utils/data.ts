@@ -1,7 +1,7 @@
 export const workList = [
-  { id: 'Kronos_Research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend', imgUrl: '/temp/img/kronos/kronos_home.png' },
+  { id: 'Kronos_Research', title: 'Kronos Research Website with Web3D', projectType: 'Freelance', projectScope: 'Frontend', imgUrl: '/temp/img/kronos/kronos_home.png' },
   { id: 'Upgrading_the_Information_Architecture_of_the_Ministry_of_Justice', title: 'Upgrading the Information Architecture of the Ministry of Justice Website', projectType: 'Master Degree', projectScope: 'UX', imgUrl: '/temp/img/moj/moj1.png' },
-  { id: 'Environmental_Information_Open_Platform_and_CMS', title: 'Environmental Information Open Platform', projectType: 'Blueplanet Inc. Project', projectScope: 'Frontend', imgUrl: '/temp/img/epa/epa_home.png' },
+  { id: 'Environmental_Information_Open_Platform_and_CMS', title: 'Environmental Information Open Platform and CMS', projectType: 'Blueplanet Inc.', projectScope: 'Frontend', imgUrl: '/temp/img/epa/epa_home.png' },
 ]
 
 export const worksDetail: Work[] = [
@@ -105,14 +105,10 @@ export const worksDetail: Work[] = [
       ],
       [
         { type: "heading1", content: 'Key Features' },
-        { type: "heading2", content: 'Simplified section map' },
-        { type: "image", content: 'The section map was re-arranged into a simpler and more consistent structure', img_url: '/temp/img/moj/simplified_structure.png', alt: 'Simplified section map' },
-        { type: "heading2", content: 'Consistent titles' },
-        { type: "image", content: 'The titles have been renamed into a more consistent manner while maintain the original title’s wording, ensuring minimal transition effort for returning users.', img_url: "/temp/img/moj/rename.png", alt:  "Consistent titles" },
-        { type: "heading2", content: 'Task-focused pages' },
-        { type: "image", content: 'The necessary information for each task was collected into a single page to avoid extra navigations for users.', img_url: "/temp/img/moj/stepper.jpg", alt: "Task-focused pages" },
-        { type: "heading2", content: 'Self-descriptive links' },
-        { type: "image", content: 'Links were made more self-descriptive so that users can easily understand the destination and purposes of each link, aiding their decision on whether to click.', img_url: "/temp/img/moj/self_desc_link.png", alt: "Self-descriptive links" },
+        { type: "image", heading: "Simplified section map", content: 'The section map was re-arranged into a simpler and more consistent structure', img_url: '/temp/img/moj/simplified_structure.png', alt: 'Simplified section map' },
+        { type: "image", heading: 'Consistent titles', content: 'The titles have been renamed into a more consistent manner while maintain the original title’s wording, ensuring minimal transition effort for returning users.', img_url: "/temp/img/moj/rename.png", alt:  "Consistent titles" },
+        { type: "image", heading: 'Task-focused pages', content: 'The necessary information for each task was collected into a single page to avoid extra navigations for users.', img_url: "/temp/img/moj/stepper.jpg", alt: "Task-focused pages" },
+        { type: "image", heading: 'Self-descriptive links', content: 'Links were made more self-descriptive so that users can easily understand the destination and purposes of each link, aiding their decision on whether to click.', img_url: "/temp/img/moj/self_desc_link.png", alt: "Self-descriptive links" },
       ],
       [
         { type: "heading1", content: 'Future Steps' },
@@ -130,7 +126,7 @@ export const worksDetail: Work[] = [
   },
   {
     id: 'Kronos_Research',
-    title: "Kronos Research",
+    title: "Kronos Research Website with Web3D",
     category: "Front-end",
     abstract: "This freelance front-end project was a collaboration with the design company Brand Aspects. It utilized Nuxt 3 framework and incorporated 3D effects using Three.js.",
     metadata: [
@@ -151,7 +147,7 @@ export const worksDetail: Work[] = [
     ],
     gallery: [
       { url: '/temp/img/kronos/kronos_home.png', alt: '' },
-      { url: '/temp/img/kronos/kronos_news.png', alt: '' },
+      { url: '/temp/img/kronos/kronos_globe.png', alt: '' },
       { url: '/temp/img/kronos/kronos_mile.png', alt: '' },
       { url: '/temp/img/kronos/kronos_mile_s.png', alt: '' },
       { url: '/temp/img/kronos/kronos_particle_s.png', alt: '' },
@@ -164,12 +160,9 @@ export const worksDetail: Work[] = [
     article_blocks: [
       [
         { type: "heading1", content: 'Key Features' },
-        { type: "heading2", content: 'Background distortion' },
-        { type: "image", content: 'credits: Daniel Velasquez', img_url: '/temp/img/moj/simplified_structure.png', alt: 'Simplified section map' },
-        { type: "heading2", content: 'Earth and location pin' },
-        { type: "image", content: 'credits: GhostCatcg', img_url: '/temp/img/moj/simplified_structure.png', alt: 'Simplified section map' },
-        { type: "heading2", content: 'Particle blob animation' },
-        { type: "image", content: 'credits: Eli Fitch', img_url: '/temp/img/moj/simplified_structure.png', alt: 'Simplified section map' },
+        { type: "video", heading: 'Background distortion' ,content: 'credits: Daniel Velasquez', video_url: '/temp/video/kronos_bg_distort.mp4', alt: 'Background distortion' },
+        { type: "video", heading: 'Earth and location pin' ,content: 'credits: GhostCatcg', video_url: '/temp/video/kronos_earth.mp4', alt: 'Earth and location pin' },
+        { type: "video", heading: 'Particle blob animation',content: 'credits: Eli Fitch', video_url: '/temp/video/kronos_particle_blob.mp4', alt: 'Particle blob animation' },
       ]
     ],
     related_links: [
@@ -180,7 +173,7 @@ export const worksDetail: Work[] = [
     id: "Environmental_Information_Open_Platform_and_CMS",
     title: "Environmental Information Open Platform and CMS",
     category: "Front-end",
-    abstract: "While working at BluePlanet Inc., our team developed an open data system. As the front-end developer, I was responsible for building the website with Nuxt2 and its content management system (CMS) with Vue2, ensuring accessibility and fetching API data for both the website and the CMS.",
+    abstract: "While working at BluePlanet Inc., our team developed an open data system. I was responsible for building the website with Nuxt2 and its content management system (CMS) with Vue2, ensuring accessibility and fetching API data for both the website and the CMS.",
     metadata: [
       { label: "Project Timeline and Team", content: "2021 - 2022. A team consisting of project managers, designers, front-end developers, and back-end developers."},
       { label: "My Role", content: "Front-end development of the platform and its CMS."},
@@ -197,11 +190,11 @@ export const worksDetail: Work[] = [
     ],
     gallery: [
       { url: '/temp/img/epa/epa_ranking.png', alt: '' },
-      { url: '/temp/img/epa/epa_home.png', alt: '' },
       { url: '/temp/img/epa/epa_detail.png', alt: '' },
       { url: '/temp/img/epa/epa_category.png', alt: '' },
       { url: '/temp/img/epa/epa_api.png', alt: '' },
       { url: '/temp/img/epa/epa_search.png', alt: '' },
+      { url: '/temp/img/epa/epa_home.png', alt: '' },
       { url: '/temp/img/epa/epa_list.png', alt: '' },
       { url: '/temp/img/epa/epa_meta.png', alt: '' },
       { url: '/temp/img/epa/epa_qa.png', alt: '' },
@@ -210,12 +203,9 @@ export const worksDetail: Work[] = [
     article_blocks: [
       [
         { type: "heading1", content: 'Key Features' },
-        { type: "heading2", content: 'Search and filter' },
-        { type: "image", content: 'Flexible search and filter interface allow users to find target dataset by keywords, categories, tag, etc.', img_url: '/temp/img/epa/epa_search.png', alt: 'search screen' },
-        { type: "heading2", content: 'Accessibility' },
-        { type: "image", content: 'The platform has level AA web content accessibility, enabling the usage of keyboards and screen readers.', img_url: '/temp/img/epa/epa_sitemap.png', alt: 'sitemap' },
-        { type: "heading2", content: 'Content management system' },
-        { type: "image", content: 'The CMS is based on BluePlanet General Content Management System(BPGCMS). BPGCMS allows effective developing with the modularized components. It also ensures the usability and consistency.', img_url: '/temp/img/epa/bpgcms.png', alt: 'bpgcms' },
+        { type: "image", heading: 'Search and filter', content: 'Flexible search and filter interface allow users to find target dataset by keywords, categories, tag, etc.', img_url: '/temp/img/epa/epa_search.png', alt: 'search screen' },
+        { type: "image", heading: 'Accessibility', content: 'The platform has level AA web content accessibility, enabling the usage of keyboards and screen readers.', img_url: '/temp/img/epa/epa_sitemap.png', alt: 'sitemap' },
+        { type: "image", heading: 'Content management system', content: 'The CMS is based on BluePlanet General Content Management System(BPGCMS). BPGCMS allows effective developing with the modularized components. It also ensures the usability and consistency.', img_url: '/temp/img/epa/bpgcms.png', alt: 'bpgcms' },
       ]
     ],
     related_links: [
@@ -242,7 +232,9 @@ interface Articleblock {
   type: string;
   content?: Button[] | Content[] | string;
   img_url?: string;
+  video_url?: string;
   alt?: string;
+  heading?: string;
 }
 
 interface Content {
