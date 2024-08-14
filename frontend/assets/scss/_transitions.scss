@@ -1,0 +1,50 @@
+////// Home Transition ////////
+
+.slide-enter-active,
+.slide-leave-active {
+  transition-duration: 1s;
+  // section{
+  //   transition-duration: 1s;
+  //   &:nth-of-type(1){
+  //     transition-delay: .2s;
+  //   }
+  //   &:nth-of-type(2){
+  //     transition-delay: .4s;
+  //   }
+  //   &:nth-of-type(3){
+  //     transition-delay: 0.6s;
+  //   }
+  // }
+  overflow: hidden;
+}
+.slide-enter-from,
+.slide-leave-to {
+  --duration: 1s;
+  opacity: 0;
+  transition-duration: var(--duration);
+  .transition_slide--left{
+    transform: translateX(-100%);
+    transition-duration: var(--duration);
+  }
+  .transition_slide--right{
+    transform: translateX(100%);
+    transition-duration: var(--duration);
+  }
+  .transition_slide--top{
+    transform: translateY(-100%);
+    transition-duration: var(--duration);
+  }
+}
+
+////// About Transition ////////
+
+// .rotate-enter-active,
+// .rotate-leave-active {
+//   transition: all 2s;
+// }
+// .rotate-enter-from,
+// .rotate-leave-to {
+//   opacity: 0;
+//   transform: rotateY(90deg);
+//   perspective: 100px;
+// }

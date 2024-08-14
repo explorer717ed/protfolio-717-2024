@@ -30,6 +30,7 @@ export default defineNuxtConfig({
         separator: '(⁰▿⁰)',
       },
     },
+    pageTransition: { name: 'slide', mode: 'out-in' }
   },
   runtimeConfig: {
     // The private keys which are only available server-side

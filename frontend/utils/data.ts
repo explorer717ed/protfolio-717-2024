@@ -160,9 +160,9 @@ export const worksDetail: Work[] = [
     article_blocks: [
       [
         { type: "heading1", content: 'Key Features' },
-        { type: "video", heading: 'Background distortion' ,content: 'credits: Daniel Velasquez', video_url: '/temp/video/kronos_bg_distort.mp4', alt: 'Background distortion' },
-        { type: "video", heading: 'Earth and location pin' ,content: 'credits: GhostCatcg', video_url: '/temp/video/kronos_earth.mp4', alt: 'Earth and location pin' },
-        { type: "video", heading: 'Particle blob animation',content: 'credits: Eli Fitch', video_url: '/temp/video/kronos_particle_blob.mp4', alt: 'Particle blob animation' },
+        { type: "video", heading: 'Background distortion' ,content: 'credits: Daniel Velasquez', size: 'l', video_url: '/temp/video/kronos_bg_distort.mp4', alt: 'Background distortion' },
+        { type: "video", heading: 'Earth and location pin' ,content: 'credits: GhostCatcg', size: 'l', video_url: '/temp/video/kronos_earth.mp4', alt: 'Earth and location pin' },
+        { type: "video", heading: 'Particle blob animation',content: 'credits: Eli Fitch', size: 'l', video_url: '/temp/video/kronos_particle_blob.mp4', alt: 'Particle blob animation' },
       ]
     ],
     related_links: [
@@ -235,6 +235,7 @@ interface Articleblock {
   video_url?: string;
   alt?: string;
   heading?: string;
+  size?: string;
 }
 
 interface Content {

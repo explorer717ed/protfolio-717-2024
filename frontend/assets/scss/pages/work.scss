@@ -231,7 +231,6 @@ $margin-lr-sm: 16px;
   .image_block-image_frame{
     outline: var(--color-text) 1px solid;
     border: var(--color-bg) 10px solid;
-    // padding: 10px;
     background-color:  var(--color-bg);
     overflow: hidden;
   }
@@ -249,13 +248,16 @@ $margin-lr-sm: 16px;
     .image_block-image_frame{
       // position: absolute;
       // float: right;
-      width: 90vw;
-      margin-left: calc((90vw - 800px)/-2);
       box-shadow: $shadow-block;
       // transform: translateX(100%) translateY(-2rem);
 
       &:hover{
         z-index: 1;
+      }
+      &.image_block-image_frame--large{
+        width: 90vw;
+        margin-left: calc((90vw - 800px)/-2);
+
       }
     }
   }

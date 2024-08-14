@@ -43,7 +43,8 @@ onMounted(()=>{
 
 <style lang="scss" scoped>
 .works_title{
-  margin: 1rem;
+  padding: 1rem;
+  margin: 0;
 }
 .list_work{
   margin: 0;
