@@ -1,5 +1,5 @@
 <template>
-  <div class="about_link">
+  <div class="about_link" data-MagneticBtn>
     <span class="subtitle">Frontend Developer</span><br>
     <NuxtLink to="/about" class="text717">
       <span class="text717_text">717</span>
@@ -53,10 +53,10 @@
     }
     .text717_text{
       display: inline-block;
-      animation: text-shake .4s infinite;
+      // animation: text-shake .4s infinite;
     }
     svg{
-      animation: text-shake .4s infinite .2s;
+      // animation: text-shake .4s infinite .2s;
     }
     .about_bookmark{
       background-color: var(--color-text-lighter);

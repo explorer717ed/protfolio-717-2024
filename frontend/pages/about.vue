@@ -44,28 +44,20 @@
       </section>
     </div>
     <section class="section_works transition_slide--right">
-      <ListWork :works="listWork" class="works_list"></ListWork>
-      <ContactMsg class="wrap_contact"/>
+      <ListWork class="works_list"></ListWork>
+      <ContactMsg class="wrap_contact bg-dot"/>
     </section>
   </main>
 </template>
 
 <script lang="ts" setup>
 
-// definePageMeta({
-//   pageTransition: {
-//     name: 'rotate'
-//   }
-// })
+const { isDesktop } = useDevice();
 
-const listWork = ref([
-  { id: 'kronos-research', title: 'Kronos Research', projectType: 'Freelance', projectScope: 'Frontend' },
-  { id: 'three-js-journey-design-system', title: 'Three.js Journey Design System', projectType: 'Personal', projectScope: 'UX' },
-  { id: 'gary-tu', title: 'Gary Tu', projectType: 'Freelance', projectScope: 'Frontend' },
-  { id: 'epa-opendata', title: 'EPA Opendata', projectType: 'Blueplanet Inc. Project', projectScope: 'Frontend' },
-  { id: 'fragment', title: 'Fragment', projectType: 'Personal', projectScope: 'Frontend' },
+onMounted(()=>{
+  if(isDesktop) new magneticBtn()
+})
 
-])
 </script>
 
 <style lang="scss" scoped>

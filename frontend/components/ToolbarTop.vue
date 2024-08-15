@@ -1,12 +1,22 @@
 <template>
 <div class="toolbar">
-  <button class="btn-round-icon">
+  <button class="btn-round-icon" data-MagneticBtn>
     <Icon name="material-symbols-light:language"/>
   </button>
-  <button v-show="$colorMode.preference != 'dark'" @click="$colorMode.preference = 'dark'" class="btn-round-icon">
+  <button 
+    v-show="$colorMode.preference != 'dark'"
+    @click="$colorMode.preference = 'dark'"
+    class="btn-round-icon"
+    data-MagneticBtn
+  >
     <Icon name="material-symbols-light:nightlight-outline-rounded"/>
   </button>
-  <button v-show="$colorMode.preference != 'light'" @click="$colorMode.preference = 'light'" class="btn-round-icon">
+  <button 
+    v-show="$colorMode.preference != 'light'"
+    @click="$colorMode.preference = 'light'"
+    class="btn-round-icon"
+    data-MagneticBtn
+  >
     <Icon name="material-symbols-light:sunny-outline-rounded"/>
   </button>
 </div>

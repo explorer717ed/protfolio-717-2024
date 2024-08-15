@@ -124,27 +124,21 @@ $margin-lr-lg: 32px;
 
 .section_works{
   background: var(--color-bg);
-  margin-bottom: 50px;
+  border-top: 1px solid var(--color-text);
   
-  // .works_title{
-  //   padding: 30px 15px;
-  //   margin: 0;
-  //   // margin: 1rem;
-  //   border-top: 1px solid var(--color-text-lighter);
-  // }
-  
-  // .works_list{
-  //   margin-bottom: 50px;
-  // }
+  .wrap_contact{
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
   @include lg{
     float: right;
     width: 33.33%;
     border-left: 1px solid var(--color-text-lighter);
+    border-top-width: 0px;
     margin: 0;
     height: 100vh;
     position: fixed;
     right: 0;
-    // overflow: auto;
     .works_title{
       border-top: none;
     }

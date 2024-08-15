@@ -5,10 +5,10 @@
       ✧◝(⁰▿⁰)◜✧ <br>
     </div>
     <div class="toolbar_contact">
-      <button class="btn-round-icon">
+      <button class="btn-round-icon" data-MagneticBtn>
         <Icon name="material-symbols-light:mail-outline-rounded"/>
       </button>
-      <button class="btn-round-icon">
+      <button class="btn-round-icon" data-MagneticBtn>
         <Icon name="ion:social-linkedin-outline"/>
       </button>      
     </div>

@@ -63,7 +63,7 @@
       </section>
       <section class="page_content brief_section transition_slide--right">
         <div class="brief_card">
-          <button @click="goBack" class="brief_back_btn parallax"  data-depth='2'><Icon title="Go back" name="material-symbols-light:arrow-back-rounded"/></button>
+          <button @click="goBack" class="brief_back_btn parallax"  data-depth='2' data-MagneticBtn><Icon title="Go back" name="material-symbols-light:arrow-back-rounded"/></button>
           <div class="brief_card_tag parallax"  data-depth='1'>{{ article?.category }}</div>
           <div class="brief_card-content parallax"  data-depth='1.5'>
             <h1>{{ article?.title }}</h1>
@@ -93,7 +93,7 @@
       :imgs="article?.gallery_top"
     /> -->
     
-    <nav class="article_anchor-wrap">
+    <nav class="article_anchor-wrap" data-MagneticBtn>
       <ol class="article_anchor">
         <li v-for="h in headings" class="article_anchor-item">
           <a class="article_anchor-link" :href="'#' + underscoreWord(h)">{{ h }}</a>
@@ -123,6 +123,7 @@
                 v-for="btn in block.content"
                 :href="btn.href" target="_blank" rel="noopener noreferrer"
                 :class="'btn btn_' + btn.type"
+                data-MagneticBtn
               >
                 {{ btn.label }}
                 <Icon :name="btn.icon"/>
@@ -164,6 +165,7 @@
             v-for="link in article.related_links"
             :href="link.href" target="_blank" rel="noopener noreferrer"
             :class="'btn btn_' + link.type"
+            data-MagneticBtn
           >
             {{ link.label }}
             <Icon :name="link.icon"/>
@@ -194,6 +196,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const router = useRouter()
 const route = useRoute()
+const { isDesktop } = useDevice();
 
 const linksBreadcrumb = ref([
   { label: 'Home', to: '/' },
@@ -374,6 +377,8 @@ onMounted(()=>{
   animateGallery()
   animateDepth()
   animateImg()
+
+  if(isDesktop) new magneticBtn()
 })
 </script>
 
