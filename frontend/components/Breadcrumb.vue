@@ -5,13 +5,13 @@
     :class="{'breadcrumb--clip': isClipped}"
     ref="elBreadcrumb"
   >
-    <template v-for="(path, i) in paths" >
+    <span v-for="(path, i) in paths" >
       <span class="breadcrumb_link">
         <template v-if="!path.to">{{ path.label }}</template>
-        <NuxtLink v-else :to="path.to">{{ path.label }}</NuxtLink>
+        <NuxtLink v-else :to="path.to" data-MagneticBtn>{{ path.label }}</NuxtLink>
       </span>
       <span v-if="i < paths.length-1"class="breadcrumb_divider">/</span>
-    </template>
+    </span>
   </div>
 </template>
 
@@ -89,5 +89,9 @@ onMounted(()=>{
       z-index: 10;
     }
   }
+}
+
+.breadcrumb_link a{
+  display: inline-block
 }
 </style>

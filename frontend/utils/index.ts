@@ -28,7 +28,7 @@ const map = (x, a, b, c, d) => (x - a) * (d - c) / (b - a) + c;
  * @param {Number} maxDistance - The maximum distance for a possible translation to occur
  * @returns {JSON} the x,y translation values
  */
- const getTranslationDistance = (element1, spread = 400, maxDistance = 5000) => {
+const getTranslationDistance = (element1, spread = 400, maxDistance = 5000) => {
     const winsize = {width: window.innerWidth, height: window.innerHeight}
     const rect = element1.getBoundingClientRect();
     const elCenter = {x: rect.left + element1.offsetWidth/2, y: rect.top + element1.offsetHeight/2};
@@ -59,9 +59,17 @@ const map = (x, a, b, c, d) => (x - a) * (d - c) / (b - a) + c;
     return Math.hypot(elCenter.x - wincenter.x, elCenter.y - wincenter.y);
 }
 
+// Linear interpolation
+const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+const clamp = (num, min, max) => num <= min ? min : num >= max ? max : num;
+
 export {
     preloadImages,
     map,
+    lerp,
+    clamp,
     getTranslationDistance,
     getDistanceToCenter,
 };
+

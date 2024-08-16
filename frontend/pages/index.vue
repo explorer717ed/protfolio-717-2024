@@ -1,5 +1,6 @@
 <template>
   <main>
+    <ToolbarTop class="transition_slide--top"/>
     <section class="home-section-intro bg-grid transition_slide--left">
       <h1 class="home-intro-title">
         <Text717/>
@@ -11,18 +12,13 @@
       ></ListWork>
     </section>
     <section class="home-section-contact bg-dot previewArea transition_slide--right">
-      <ToolbarTop class="transition_slide--top"/>
       <div class="contact-msg text--center">
         Drop me a line and discuss new projects~ <br>
         ✧◝(⁰▿⁰)◜✧ <br>
       </div>
       <div class="toolbar-contact">
-        <button class="btn-round-icon" data-MagneticBtn>
-          <Icon name="material-symbols-light:mail-outline-rounded"/>
-        </button>
-        <button class="btn-round-icon" data-MagneticBtn>
-          <Icon name="ion:social-linkedin-outline"/>
-        </button>      
+        <BtnMail/>
+        <BtnLi/>
       </div>
     </section>
   </main>

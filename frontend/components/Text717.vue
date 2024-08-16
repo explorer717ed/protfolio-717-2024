@@ -66,7 +66,6 @@
     &::after{
       width: 100%;
     }
-    
   }
   :visited{
     color: var(--color-text);

@@ -93,13 +93,13 @@
       :imgs="article?.gallery_top"
     /> -->
     
-    <nav class="article_anchor-wrap" data-MagneticBtn>
+    <nav class="article_anchor-wrap">
       <ol class="article_anchor">
         <li v-for="h in headings" class="article_anchor-item">
-          <a class="article_anchor-link" :href="'#' + underscoreWord(h)">{{ h }}</a>
+          <a class="article_anchor-link" :href="'#' + underscoreWord(h)" data-MagneticBtn>{{ h }}</a>
         </li>
-        <li class="text--center">
-          <button @click="goTop" class="article_anchor-go_top">↑</button>
+        <li class="text--center article_anchor-go_top">
+          <button @click="goTop" class="">↑</button>
         </li>
       </ol>
     </nav>

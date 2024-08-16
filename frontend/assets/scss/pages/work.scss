@@ -28,8 +28,8 @@ $margin-lr-sm: 16px;
   margin-left: 30px;
   position: absolute;
   border: var(--color-text) 1px solid;
-  
-  width: 120px;
+  font-size: 0.9rem;
+  width: 132px;
   box-shadow: $shadow-block;
   background-color: var(--color-bg);
 }
@@ -42,14 +42,14 @@ $margin-lr-sm: 16px;
   }
 }
 .article_anchor-go_top{
-  width: 100%;
-  font-size: 1.25rem;
-  background: transparent;
-  color: var(--color-text);
-  padding: 5px;
   border-top: var(--color-text) 1px solid;
-  cursor: pointer;
-
+  button{
+    width: 100%;
+    font-size: 1.25rem;
+    background: transparent;
+    color: var(--color-text);
+    padding: 5px;
+  }
   &:hover, &:focus{
     background-color: var(--color-btn-bg-hover);
   }

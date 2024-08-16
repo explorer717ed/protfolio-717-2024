@@ -1,14 +1,6 @@
 import {gsap} from 'gsap';
-// import { map, lerp, clamp, getMousePos } from './utils';
-// const images = Object.entries(require('/temp/img/*.png'));
+import { map, lerp, clamp } from './index';
 
-// Map number x from range [a, b] to [c, d]
-const map = (x, a, b, c, d) => (x - a) * (d - c) / (b - a) + c;
-
-// Linear interpolation
-const lerp = (a, b, n) => (1 - n) * a + n * b;
-
-const clamp = (num, min, max) => num <= min ? min : num >= max ? max : num;
 
 // Gets the mouse position
 const getMousePos = (ev) => {
@@ -67,12 +59,10 @@ export default class MenuItem {
         this.DOM.revealInner.className = 'hover-reveal__inner';
         this.DOM.revealImage = document.createElement('div');
         this.DOM.revealImage.className = 'hover-reveal__img';
-        // this.DOM.revealImage.style.backgroundImage = `url(/temp/img/moj/moj1.png)`;
         this.DOM.revealImage.style.backgroundImage = `url('${this.imgUrl}')`;
 
         this.DOM.revealInner.appendChild(this.DOM.revealImage);
         this.DOM.reveal.appendChild(this.DOM.revealInner);
-        // this.DOM.el.appendChild(this.DOM.reveal);
         this.DOM.previewArea.appendChild(this.DOM.reveal);
     }
     // calculate the position/size of both the menu item and reveal element
@@ -112,7 +102,7 @@ export default class MenuItem {
                 // show the image element
                 this.DOM.reveal.style.opacity = 1;
                 // set a high z-index value so image appears on top of other elements
-                gsap.set(this.DOM.previewArea, {zIndex: 100});
+                gsap.set(this.DOM.previewArea, {zIndex: 25});
                 // gsap.set(this.DOM.el, {zIndex: 100});
                 // gsap.set(this.DOM.el, {zIndex: images.length});
             }
@@ -197,8 +187,6 @@ export default class MenuItem {
 
         // set up the interpolated values
         // for the first cycle, both the interpolated values need to be the same so there's no "lerped" animation between the previous and current state
-        // this.animatableProperties.tx.previous = this.animatableProperties.tx.current;
-        // this.animatableProperties.ty.previous = this.animatableProperties.ty.current;
         this.animatableProperties.tx.previous = this.firstRAFCycle ? this.animatableProperties.tx.current : lerp(this.animatableProperties.tx.previous, this.animatableProperties.tx.current, this.animatableProperties.tx.amt);
         this.animatableProperties.ty.previous = this.firstRAFCycle ? this.animatableProperties.ty.current : lerp(this.animatableProperties.ty.previous, this.animatableProperties.ty.current, this.animatableProperties.ty.amt);
         this.animatableProperties.rotation.previous = this.firstRAFCycle ? this.animatableProperties.rotation.current : lerp(this.animatableProperties.rotation.previous, this.animatableProperties.rotation.current, this.animatableProperties.rotation.amt);
@@ -206,7 +194,6 @@ export default class MenuItem {
         
         // set styles
         gsap.set(this.DOM.reveal, {
-            // x: this.bounds.el.width + this.animatableProperties.tx.previous*0.4,
             x: this.animatableProperties.tx.previous*0.3,
             y: this.animatableProperties.ty.previous,
             scale: 1 + (this.animatableProperties.tx.previous / this.bounds.el.width) * 0.5,

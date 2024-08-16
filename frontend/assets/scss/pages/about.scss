@@ -4,7 +4,7 @@ $margin-lr-lg: 32px;
 
 .about_toolbar_top{
   @include lg{
-    right: calc(33.33% + 15px);
+    right: calc(33.33% + 20px);
   }
 }
 
@@ -108,7 +108,8 @@ $margin-lr-lg: 32px;
     --mlr: #{$margin-lr-lg};
     float: left;
     width: 66.66%;
-
+    height: 100vh;
+    overflow: auto;
     .self_intro{
       float: left;
       width: 50%;
