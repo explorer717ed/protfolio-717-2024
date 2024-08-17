@@ -1,9 +1,9 @@
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger) 
 
 export const useLenis = (el?: HTMLElement) => {
+  gsap.registerPlugin(ScrollTrigger) 
 
   let config: any = {
     duration: .5,
@@ -23,7 +23,6 @@ export const useLenis = (el?: HTMLElement) => {
   }
 
 
-  console.log(config.wrapper);
   lenis = new Lenis(config)
   requestAnimationFrame(_raf);
 
