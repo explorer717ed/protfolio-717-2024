@@ -1,7 +1,7 @@
 <template>
   <main>
     <ToolbarTop class="about_toolbar_top transition_slide--top"/>
-    <div class="bg-grid page_about transition_slide--left">
+    <div ref="aboutContent" class="bg-grid page_about transition_slide--left">
       <Breadcrumb
         :paths="[{ label: 'Home', to: '/'}, { label: 'About' }]"
       />
@@ -52,11 +52,13 @@
 </template>
 
 <script lang="ts" setup>
-
 const { isDesktop } = useDevice();
 
+const aboutContent = ref()
 onMounted(()=>{
   if(isDesktop) new magneticBtn()
+  
+  useLenis(aboutContent.value)
 })
 
 </script>

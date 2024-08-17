@@ -110,6 +110,9 @@ button{
 .btn_primary{
   padding: 12px 22px;
   font-size: .9rem;
+  svg{
+    pointer-events: none;
+  }
 }
 
 .text--center{

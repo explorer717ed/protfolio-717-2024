@@ -2,7 +2,7 @@
   <main>
     <ToolbarTop/>
     <div class="bg-dot work_top">
-      <Breadcrumb :paths="linksBreadcrumb" max-width="calc(100% - 180px)" class="transition_slide--top"/>
+      <Breadcrumb :paths="linksBreadcrumb" max-width="calc(100% - 120px)" class="work_breadcrumb transition_slide--top"/>
   
   
       <section class="section section--columns" id="work_gallery">
@@ -93,17 +93,17 @@
       :imgs="article?.gallery_top"
     /> -->
     
-    <nav class="article_anchor-wrap">
-      <ol class="article_anchor">
-        <li v-for="h in headings" class="article_anchor-item">
-          <a class="article_anchor-link" :href="'#' + underscoreWord(h)" data-MagneticBtn>{{ h }}</a>
-        </li>
-        <li class="text--center article_anchor-go_top">
-          <button @click="goTop" class="">↑</button>
-        </li>
-      </ol>
-    </nav>
     <div class="work_article-wrap">
+      <nav class="article_anchor-wrap">
+        <ol class="article_anchor">
+          <li v-for="h in headings" class="article_anchor-item">
+            <a class="article_anchor-link" :href="'#' + underscoreWord(h)" data-MagneticBtn>{{ h }}</a>
+          </li>
+          <li class="text--center article_anchor-go_top">
+            <button @click="goTop" class="">↑</button>
+          </li>
+        </ol>
+      </nav>
       <article class="page_content" id="work_article">
         
         <section v-for="section in article?.article_blocks" class="article_section">
@@ -306,9 +306,7 @@ const animateGallery = () => {
       }
     },
     ease: 'none',
-    x: (pos, target) => {
-      return getTranslationDistance(target, 100)['x'];
-    },
+    x: 0,
     y: 0
   }, 'start')
   .to(DOM.sections.columns, {
@@ -366,17 +364,11 @@ const animateImg = () => {
 
 onMounted(()=>{
 
-  ScrollTrigger.create({
-    trigger: "#work_article",
-    start: "top top", 
-    end: "bottom 40%",
-    pin: ".article_anchor-wrap",
-    // markers: true,
-  });
-
   animateGallery()
   animateDepth()
   animateImg()
+
+  useLenis()
 
   if(isDesktop) new magneticBtn()
 })

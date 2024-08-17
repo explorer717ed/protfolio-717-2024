@@ -10,23 +10,29 @@ $margin-lr-sm: 16px;
   }
 }
 
+.work_breadcrumb{
+  position: sticky;
+  top: 15px;
+  z-index: 20;
+}
+
 .work_top{
   background-attachment: fixed;
 }
 
 .article_anchor-wrap{
   display: none;
-  position: absolute;
+  position: sticky;
+  top: 0px;
   transition-duration: 0s;
   z-index: 4;
+  float: left;
   @include xl{
     display: block;
   }
 }
 .article_anchor{
-  margin-top: 30px;
-  margin-left: 30px;
-  position: absolute;
+  margin: 30px 15px 40px;
   border: var(--color-text) 1px solid;
   font-size: 0.9rem;
   width: 132px;

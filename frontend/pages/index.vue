@@ -36,6 +36,7 @@ const { isDesktop } = useDevice();
 
 onMounted(()=>{
   if(isDesktop) new magneticBtn()
+  useLenis()
 })
 
 
