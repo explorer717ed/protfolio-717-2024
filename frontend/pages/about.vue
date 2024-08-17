@@ -7,40 +7,40 @@
       />
   
       <section class="about-self page_content mt_about">
-        <h1 class="self_intro">
+        <h1 class="self_intro" scroll-drift>
           <span class="self_greet">Hello~ I’m</span><br>
           <span class="self_name">717</span>
           <span class="self_emoji"> (*’ｰ’*)</span>
         </h1>
-        <div class="self_photo mt_about">
+        <div class="self_photo mt_about" scroll-drift>
           <img class="self_photo_img" src="~/assets/img/photo_717.png" alt="A very cute self-portrait.">
         </div>
         <div class="clear_fix"></div>
-        <p class="self_role mt_about">
+        <p class="self_role mt_about" scroll-drift>
           / Frontend Developer<br>
           / UX/UI Designer<br>
           / Backend Developer
         </p>
-        <h2 class="about_p_title mt_about">
+        <h2 class="about_p_title mt_about" scroll-drift>
           Currently based in
           <span class="about_from_tw">Taiwan</span> New Zealand.
         </h2>
-        <h2 class="about_p_title mt_about">Front-end Develop</h2>
-        <p class="about_content">
+        <h2 class="about_p_title mt_about" scroll-drift>Front-end Develop</h2>
+        <p class="about_content" scroll-drift>
           Over 4 years of working in software companies and 1 year of freelance experience.
           My development expertise primarily focuses on Vue and Nuxt, with additional experience in Angular, Typescript and HTML5.
         </p>
-        <h2 class="about_p_title mt_about">UX / UI Design</h2>
-        <p class="about_content">
+        <h2 class="about_p_title mt_about" scroll-drift>UX / UI Design</h2>
+        <p class="about_content" scroll-drift>
           Through the Master's degree in UX design from Victoria University of Wellington, I have worked on multiple UI/UX projects, both individually and with teams.
           It includes UX research, interview, workshop and using Figma to design prototypes.
         </p>
-        <h2 class="about_p_title mt_about">Back-end Develop</h2>
-        <p class="about_content">
+        <h2 class="about_p_title mt_about" scroll-drift>Back-end Develop</h2>
+        <p class="about_content" scroll-drift>
           Having learned and developed with PHP, MySQL, and system analysis in code camp, the foundational back-end skills complement my front-end expertise.
         </p>
       </section>
-      <section class="section_contact mt_about">
+      <section class="section_contact">
         <ContactMsg/>
       </section>
     </div>
@@ -55,10 +55,16 @@
 const { isDesktop } = useDevice();
 
 const aboutContent = ref()
+// const elDrift = ref()
 onMounted(()=>{
   if(isDesktop) new magneticBtn()
   
   useLenis(aboutContent.value)
+
+  document.querySelectorAll('[scroll-drift]').forEach(el=>{
+    new scrollYDrift( el, aboutContent.value )
+  })
+  
 })
 
 </script>

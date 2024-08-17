@@ -93,10 +93,10 @@
       <nav class="article_anchor-wrap">
         <ol class="article_anchor">
           <li v-for="h in headings" class="article_anchor-item">
-            <a class="article_anchor-link" :href="'#' + underscoreWord(h)" data-MagneticBtn>{{ h }}</a>
+            <a @click.prevent="scrollTo(underscoreWord(h))" class="article_anchor-link" :href="'#' + underscoreWord(h)" data-MagneticBtn>{{ h }}</a>
           </li>
           <li class="text--center article_anchor-go_top">
-            <button @click="goTop" class="">↑</button>
+            <button @click="goTop" data-MagneticBtn>↑</button>
           </li>
         </ol>
       </nav>
@@ -233,6 +233,13 @@ const goBack = () => {
   router.go(-1)
 }
 
+const scrollTo = (id) => {
+  let el = document.getElementById(id)
+  if(!el) return
+  el.scrollIntoView({ 
+    behavior: 'smooth' 
+  });
+}
 const goTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
