@@ -88,10 +88,6 @@
       </section>
   
     </div>
-    <!-- <Gallery
-      class="bg-dot gallery_top"
-      :imgs="article?.gallery_top"
-    /> -->
     
     <div class="work_article-wrap">
       <nav class="article_anchor-wrap">
@@ -173,9 +169,7 @@
         </div>
       </article>
     </div>
-  
-    <!-- <Gallery v-if="article?.gallery_bottom" class="bg-dot gallery_bottom" :imgs="article?.gallery_bottom"/> -->
-  
+
     <section class="section_more_work transition_slide--left">
       <ListWork :preview="true" title="More Works"></ListWork>
     </section>

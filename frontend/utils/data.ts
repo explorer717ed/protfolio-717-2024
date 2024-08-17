@@ -16,22 +16,6 @@ export const worksDetail: Work[] = [
     ],
     abstract: "An UX team project in Victoria University of Wellington, cooperating with the Ministry of Justice, involving information architecture, design system and website design.",
     tags: ['UX Case Study'],
-    gallery_top:[
-      { url: '/temp/img/moj/moj1.png', size: 'l', alt: '' },
-      { url: '/temp/img/moj/moj2.png', size: 's', alt: '' },
-      { url: '/temp/img/moj/moj5.png', size: 's', alt: '' },
-      { url: '/temp/img/moj/moj4.png', size: 's', alt: '' },
-      { url: '/temp/img/moj/moj6.png', size: 's', alt: '' },
-      { url: '/temp/img/moj/moj3.png', size: 'l', alt: '' },
-    ],
-    gallery_bottom: [
-      { url: '/temp/img/moj/moj9.png', size: 'l', alt: '' },
-      { url: '/temp/img/moj/moj8.png', size: 's', alt: '' },
-      { url: '/temp/img/moj/moj11.png', size: 's', alt: '' },
-      { url: '/temp/img/moj/moj10.png', size: 'l', alt: '' },
-      { url: '/temp/img/moj/moj7.png', size: 's', alt: '' },
-      { url: '/temp/img/moj/moj12.png', size: 's', alt: '' },
-    ],
     gallery: [
       { url: '/temp/img/moj/moj1.png', alt: '' },
       { url: '/temp/img/moj/moj2.png', alt: '' },
@@ -128,23 +112,13 @@ export const worksDetail: Work[] = [
     id: 'Kronos_Research',
     title: "Kronos Research Website with Web3D",
     category: "Front-end",
-    abstract: "This freelance front-end project was a collaboration with the design company Brand Aspects. It utilized Nuxt 3 framework and incorporated 3D effects using Three.js.",
+    abstract: "This freelance front-end project was a collaboration with the design company Brand Aspects. It utilized Nuxt3 framework and 3D effects using Three.js.",
     metadata: [
       { label: "Project Timeline and Team", content: "2023-2024. A team consisting of a project manager, designers, a front-end developer, and a back-end developer." },
       { label: "My Role", content: "Front-end development of the official website, writing API specification." },
       { label: "Techniques", content: "Nuxt3, Three.js, GSAP, TypeScript." },
     ],
     tags: [ "Web3D" ],
-    gallery_top: [
-      { url: '/temp/img/kronos/kronos_home.png', size: 's', alt: '' },
-      { url: '/temp/img/kronos/kronos_news.png', size: 's', alt: '' },
-      { url: '/temp/img/kronos/kronos_mile.png', size: 's', alt: '' },
-      { url: '/temp/img/kronos/kronos_mile_s.png', size: 's', alt: '' },
-      { url: '/temp/img/kronos/kronos_particle_s.png', size: 's', alt: '' },
-      { url: '/temp/img/kronos/kronos_life.png', size: 's', alt: '' },
-      { url: '/temp/img/kronos/kronos_career.png', size: 's', alt: '' },
-      { url: '/temp/img/kronos/kronos_select.png', size: 's', alt: '' },
-    ],
     gallery: [
       { url: '/temp/img/kronos/kronos_home.png', alt: '' },
       { url: '/temp/img/kronos/kronos_globe.png', alt: '' },
@@ -180,14 +154,6 @@ export const worksDetail: Work[] = [
       { label: "Techniques", content: "Nuxt2, Vue2, TypeScript, A11y" }
     ],
     tags: [ "A11y", "CMS" ],
-    gallery_top: [
-      { url: '/temp/img/epa/epa_search.png', size: 's', alt: '' },
-      { url: '/temp/img/epa/epa_ranking.png', size: 's', alt: '' },
-      { url: '/temp/img/epa/epa_home.png', size: 's', alt: '' },
-      { url: '/temp/img/epa/epa_detail.png', size: 's', alt: '' },
-      { url: '/temp/img/epa/epa_category.png', size: 's', alt: '' },
-      { url: '/temp/img/epa/bpgcms.png', size: 's', alt: '' },
-    ],
     gallery: [
       { url: '/temp/img/epa/epa_ranking.png', alt: '' },
       { url: '/temp/img/epa/epa_detail.png', alt: '' },
@@ -221,8 +187,6 @@ export interface Work {
   abstract: string;
   metadata: Metadatum[];
   tags: string[];
-  gallery_top: Gallery[];
-  gallery_bottom?: Gallery[];
   gallery: { url: string, alt?: string }[]
   article_blocks: Articleblock[][];
   related_links?: Button[];
