@@ -18,25 +18,26 @@
         <div class="clear_fix"></div>
         <p class="self_role mt_about">
           / Frontend Developer<br>
-          / UX Designer<br>
-          / UI Designer<br>
+          / UX/UI Designer<br>
           / Backend Developer
         </p>
         <h2 class="about_p_title mt_about">
           Currently based in
           <span class="about_from_tw">Taiwan</span> New Zealand.
         </h2>
-        <h2 class="about_p_title mt_about">Front end Develop</h2>
+        <h2 class="about_p_title mt_about">Front-end Develop</h2>
         <p class="about_content">
-          Mainly using Vue.js + Typescript...
+          Over 4 years of working in software companies and 1 year of freelance experience.
+          My development expertise primarily focuses on Vue and Nuxt, with additional experience in Angular, Typescript and HTML5.
         </p>
         <h2 class="about_p_title mt_about">UX / UI Design</h2>
         <p class="about_content">
-          UX research, interview and workshop experience. Using Figma to design prototypes.
+          Through the Master's degree in UX design from Victoria University of Wellington, I have worked on multiple UI/UX projects, both individually and with teams.
+          It includes UX research, interview, workshop and using Figma to design prototypes.
         </p>
-        <h2 class="about_p_title mt_about">Back end Develop</h2>
+        <h2 class="about_p_title mt_about">Back-end Develop</h2>
         <p class="about_content">
-          Having basic knowledge on PHP, Node.js, MySQL, and system analysis.
+          Having learned and developed with PHP, MySQL, and system analysis in code camp, the foundational back-end skills complement my front-end expertise.
         </p>
       </section>
       <section class="section_contact mt_about">

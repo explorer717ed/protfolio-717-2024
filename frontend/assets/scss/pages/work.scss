@@ -174,6 +174,10 @@ $margin-lr-sm: 16px;
 
 .brief_tags{
   font-size: .8rem;
+  text-align: center;
+  a:not(:last-of-type){
+    margin-right: 0.8rem;
+  }
 }
 
 .article_p{
@@ -279,6 +283,9 @@ $margin-lr-sm: 16px;
 
 .aritcle_tags{
   text-align: center;
+  a:not(:last-of-type){
+    margin-right: 1rem;
+  }
 }
 
 .list_feature_desc{

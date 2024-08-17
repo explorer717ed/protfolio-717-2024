@@ -39,7 +39,7 @@ $shadow-block: 1px 1px 2px var(--color-text-lighter);
   --color-text-light: #{ darken($color-bg-light, 40%) };
   --color-text-lighter: #{ darken($color-bg-light, 50%) };
   --color-bg: #{ $color-bg-dark };
-  --color-grid-line: rgb(95, 95, 95);
+  --color-grid-line: rgb(75, 75, 75);
 
   --color-btn-bg-hover: #{ lighten($color-bg-dark, 20%)};
   --color-btn-bg-active: #{ lighten($color-bg-dark, 30%)};
@@ -83,5 +83,12 @@ $shadow-block: 1px 1px 2px var(--color-text-lighter);
 @mixin xl {
   @media (min-width: #{$screen-xl-min}) {
       @content;
+  }
+}
+
+// Hover devices
+@mixin hover {
+  @media (hover: hover) {
+    @content;
   }
 }
