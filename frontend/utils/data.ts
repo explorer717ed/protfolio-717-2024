@@ -144,13 +144,13 @@ export const worksDetail: Work[] = [
       [
         { type: "heading1", content: 'Key Features' },
         { type: "heading2", content: 'Background distortion' },
-        { type: 'paragraph', content: "credits: Daniel Velasquez" },
+        { type: 'paragraph', content: `After learning the basics of Three.js, I referred to <a href="https://tympanus.net/codrops/2019/10/08/creating-a-water-like-distortion-effect-with-three-js/" target="_blank" rel="noopener noreferrer">Daniel Velasquez's article on Codrops</a> to create the background distortion effect.` },
         { type: "video", size: 'l', video_url: '/temp/video/kronos_bg_distort.mp4', alt: 'Background distortion' },
-        { type: "heading2", content: 'Earth and location pin' },
-        { type: 'paragraph', content: "credits: GhostCatcg" },
+        { type: "heading2", content: 'Earth and location pins' },
+        { type: 'paragraph', content: `The 3D Earth and location pins showing the international offices of Kronos were inspired by <a href="https://github.com/GhostCatcg/3d-earth" target="_blank" rel="noopener noreferrer">GhostCatcg’s project</a>.` },
         { type: "video", size: 'l', video_url: '/temp/video/kronos_earth.mp4', alt: 'Earth and location pin' },
         { type: "heading2", content: 'Particle blob animation' },
-        { type: 'paragraph', content: "credits: Eli Fitch" },
+        { type: 'paragraph', content: `The animated particle blob adds a high-tech vibe to the Kronos Ventures page. (Credits: <a href="https://codepen.io/elifitch/pen/opNeMW" target="_blank" rel="noopener noreferrer">Eli Fitch</a>)` },
         { type: "video", size: 'l', video_url: '/temp/video/kronos_particle_blob.mp4', alt: 'Particle blob animation' },
       ]
     ],

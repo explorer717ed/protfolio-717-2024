@@ -189,10 +189,18 @@ $margin-lr-sm: 16px;
   }
 }
 
-.article_p{
+:deep(.article_p){
   line-height: 1.5;
   margin-bottom: 1rem;
   color: var(--color-text-light);
+  
+  a{
+    color: var(--color-text-light);
+    &:hover{
+      color: var(--color-text);
+
+    }
+  }
 }
 
 :deep(.article_card){
