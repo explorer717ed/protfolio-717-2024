@@ -155,7 +155,7 @@ export const worksDetail: Work[] = [
       ]
     ],
     related_links: [
-      { label: "Launch Website", href: "https://kronosresearch.com/", type: "primary", icon: "material-symbols-light:open-in-new-rounded" },
+      { label: "Visit Kronos Website", href: "https://kronosresearch.com/", type: "primary", icon: "material-symbols-light:open-in-new-rounded" },
     ]
   },
   {

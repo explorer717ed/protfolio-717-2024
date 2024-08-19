@@ -1,5 +1,5 @@
 <template>
-  <div class="work_wrap">
+  <div>
     <h2 class="works_title">{{ title }}</h2>
   
     <ul ref="elWorkList" class="list list_work">
@@ -30,8 +30,11 @@ const props = defineProps({
   }
 })
 
-
+const route = useRoute()
 const listWork = ref(workList)
+if(route.name === 'works-id'){
+  listWork.value = listWork.value.filter(work => work.id !== route.params.id)
+}
 
 const elWorkList = ref()
 
@@ -43,9 +46,6 @@ onMounted(()=>{
 </script>
 
 <style lang="scss" scoped>
-.work_wrap{
-  position: relative;
-}
 .works_title{
   padding: 1rem;
   margin: 0;
@@ -99,13 +99,10 @@ onMounted(()=>{
 }
 
 .copyright{
-  position: absolute;
   color: var( --color-text-lighter);
   font-size: 0.75rem;
-  bottom: -40px;
-  left: 0;
-  right: 0;
   text-align: center;
+  padding: 20px;
 }
 
 @media (hover: hover) {

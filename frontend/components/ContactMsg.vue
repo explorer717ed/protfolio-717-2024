@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="contact_msg text--center">
-      Drop me a line and discuss new projects~ <br>
+      <slot>Drop me a line and discuss new projects~</slot><br>
       ✧◝(⁰▿⁰)◜✧ <br>
     </div>
     <div class="toolbar_contact">
