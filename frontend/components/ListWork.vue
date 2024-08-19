@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="work_wrap">
     <h2 class="works_title">{{ title }}</h2>
   
     <ul ref="elWorkList" class="list list_work">
@@ -13,6 +13,7 @@
         </NuxtLink>
       </li>
     </ul>
+    <div class="copyright">Copyright © 2024 717 - All Rights Reserved.</div>
   </div>
 </template>
 
@@ -42,6 +43,9 @@ onMounted(()=>{
 </script>
 
 <style lang="scss" scoped>
+.work_wrap{
+  position: relative;
+}
 .works_title{
   padding: 1rem;
   margin: 0;
@@ -94,6 +98,15 @@ onMounted(()=>{
   }
 }
 
+.copyright{
+  position: absolute;
+  color: var( --color-text-lighter);
+  font-size: 0.75rem;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
 
 @media (hover: hover) {
   /* when hover is supported */
