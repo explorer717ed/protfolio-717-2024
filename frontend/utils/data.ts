@@ -1,5 +1,5 @@
 export const workList = [
-  { id: 'Kronos_Research', title: 'Kronos Research Website with Web3D', projectType: 'Freelance', projectScope: 'Front-end', imgUrl: '/temp/img/kronos/kronos_home.png' },
+  { id: 'Kronos_Research', title: 'Kronos Research Website with Three.js', projectType: 'Freelance', projectScope: 'Front-end', imgUrl: '/temp/img/kronos/kronos_home.png' },
   { id: 'Upgrading_the_Information_Architecture_of_the_Ministry_of_Justice', title: 'Upgrading the Information Architecture of the Ministry of Justice Website', projectType: 'Master Degree', projectScope: 'UX', imgUrl: '/temp/img/moj/moj1.png' },
   { id: 'Environmental_Information_Open_Platform_and_CMS', title: 'Environmental Information Open Platform and CMS', projectType: 'Blueplanet Inc.', projectScope: 'Front-end', imgUrl: '/temp/img/epa/epa_home.png' },
   { id: 'Taipei_Citizen_Dashboard', title: 'Taipei Citizen Dashboard', projectType: 'Blueplanet Inc.', projectScope: 'Front-end', imgUrl: '/temp/img/dashboard/dashboard_home.png' },
@@ -119,7 +119,7 @@ export const worksDetail: Work[] = [
   },
   {
     id: 'Kronos_Research',
-    title: "Kronos Research Website with Web3D",
+    title: "Kronos Research Website with Three.js",
     category: "Front-end",
     abstract: "This freelance front-end project was a collaboration with the design company Brand Aspects. It utilized Nuxt3 framework and 3D effects using Three.js.",
     metadata: [
