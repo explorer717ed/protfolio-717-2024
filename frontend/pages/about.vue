@@ -17,9 +17,9 @@
         </div>
         <div class="clear_fix"></div>
         <p class="self_role mt_about" scroll-drift>
-          / Frontend Developer<br>
+          / Front-end Developer<br>
           / UX/UI Designer<br>
-          / Backend Developer
+          / Back-end Developer
         </p>
         <h2 class="about_p_title mt_about" scroll-drift>
           Currently based in

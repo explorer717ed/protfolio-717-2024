@@ -1,7 +1,8 @@
 export const workList = [
-  { id: 'Kronos_Research', title: 'Kronos Research Website with Web3D', projectType: 'Freelance', projectScope: 'Frontend', imgUrl: '/temp/img/kronos/kronos_home.png' },
+  { id: 'Kronos_Research', title: 'Kronos Research Website with Web3D', projectType: 'Freelance', projectScope: 'Front-end', imgUrl: '/temp/img/kronos/kronos_home.png' },
   { id: 'Upgrading_the_Information_Architecture_of_the_Ministry_of_Justice', title: 'Upgrading the Information Architecture of the Ministry of Justice Website', projectType: 'Master Degree', projectScope: 'UX', imgUrl: '/temp/img/moj/moj1.png' },
-  { id: 'Environmental_Information_Open_Platform_and_CMS', title: 'Environmental Information Open Platform and CMS', projectType: 'Blueplanet Inc.', projectScope: 'Frontend', imgUrl: '/temp/img/epa/epa_home.png' },
+  { id: 'Environmental_Information_Open_Platform_and_CMS', title: 'Environmental Information Open Platform and CMS', projectType: 'Blueplanet Inc.', projectScope: 'Front-end', imgUrl: '/temp/img/epa/epa_home.png' },
+  { id: 'Taipei_Citizen_Dashboard', title: 'Taipei Citizen Dashboard', projectType: 'Blueplanet Inc.', projectScope: 'Front-end', imgUrl: '/temp/img/dashboard/dashboard_home.png' },
 ]
 
 export const worksDetail: Work[] = [
@@ -89,10 +90,18 @@ export const worksDetail: Work[] = [
       ],
       [
         { type: "heading1", content: 'Key Features' },
-        { type: "image", heading: "Simplified section map", content: 'The section map was re-arranged into a simpler and more consistent structure', img_url: '/temp/img/moj/simplified_structure.png', alt: 'Simplified section map' },
-        { type: "image", heading: 'Consistent titles', content: 'The titles have been renamed into a more consistent manner while maintain the original title’s wording, ensuring minimal transition effort for returning users.', img_url: "/temp/img/moj/rename.png", alt:  "Consistent titles" },
-        { type: "image", heading: 'Task-focused pages', content: 'The necessary information for each task was collected into a single page to avoid extra navigations for users.', img_url: "/temp/img/moj/stepper.jpg", alt: "Task-focused pages" },
-        { type: "image", heading: 'Self-descriptive links', content: 'Links were made more self-descriptive so that users can easily understand the destination and purposes of each link, aiding their decision on whether to click.', img_url: "/temp/img/moj/self_desc_link.png", alt: "Self-descriptive links" },
+        { type: "heading2", content: "Simplified section map"},
+        { type: 'paragraph', content:  'The section map was re-arranged into a simpler and more consistent structure' },
+        { type: "image", img_url: '/temp/img/moj/simplified_structure.png', alt: 'Simplified section map' },
+        { type: "heading2", content: 'Consistent titles'},
+        { type: 'paragraph', content: 'The titles have been renamed into a more consistent manner while maintain the original title’s wording, ensuring minimal transition effort for returning users.' },
+        { type: "image", img_url: "/temp/img/moj/rename.png", alt:  "Consistent titles" },
+        { type: "heading2", content: 'Task-focused pages'},
+        { type: 'paragraph', content: 'The necessary information for each task was collected into a single page to avoid extra navigations for users.' },
+        { type: "image", img_url: "/temp/img/moj/stepper.jpg", alt: "Task-focused pages" },
+        { type: "heading2", content: 'Self-descriptive links'},
+        { type: 'paragraph', content: 'Links were made more self-descriptive so that users can easily understand the destination and purposes of each link, aiding their decision on whether to click.' },
+        { type: "image", img_url: "/temp/img/moj/self_desc_link.png", alt: "Self-descriptive links" },
       ],
       [
         { type: "heading1", content: 'Future Steps' },
@@ -134,9 +143,15 @@ export const worksDetail: Work[] = [
     article_blocks: [
       [
         { type: "heading1", content: 'Key Features' },
-        { type: "video", heading: 'Background distortion' ,content: 'credits: Daniel Velasquez', size: 'l', video_url: '/temp/video/kronos_bg_distort.mp4', alt: 'Background distortion' },
-        { type: "video", heading: 'Earth and location pin' ,content: 'credits: GhostCatcg', size: 'l', video_url: '/temp/video/kronos_earth.mp4', alt: 'Earth and location pin' },
-        { type: "video", heading: 'Particle blob animation',content: 'credits: Eli Fitch', size: 'l', video_url: '/temp/video/kronos_particle_blob.mp4', alt: 'Particle blob animation' },
+        { type: "heading2", content: 'Background distortion' },
+        { type: 'paragraph', content: "credits: Daniel Velasquez" },
+        { type: "video", size: 'l', video_url: '/temp/video/kronos_bg_distort.mp4', alt: 'Background distortion' },
+        { type: "heading2", content: 'Earth and location pin' },
+        { type: 'paragraph', content: "credits: GhostCatcg" },
+        { type: "video", size: 'l', video_url: '/temp/video/kronos_earth.mp4', alt: 'Earth and location pin' },
+        { type: "heading2", content: 'Particle blob animation' },
+        { type: 'paragraph', content: "credits: Eli Fitch" },
+        { type: "video", size: 'l', video_url: '/temp/video/kronos_particle_blob.mp4', alt: 'Particle blob animation' },
       ]
     ],
     related_links: [
@@ -169,13 +184,56 @@ export const worksDetail: Work[] = [
     article_blocks: [
       [
         { type: "heading1", content: 'Key Features' },
-        { type: "image", heading: 'Search and filter', content: 'Flexible search and filter interface allow users to find target dataset by keywords, categories, tag, etc.', img_url: '/temp/img/epa/epa_search.png', alt: 'search screen' },
-        { type: "image", heading: 'Accessibility', content: 'The platform has level AA web content accessibility, enabling the usage of keyboards and screen readers.', img_url: '/temp/img/epa/epa_sitemap.png', alt: 'sitemap' },
-        { type: "image", heading: 'Content management system', content: 'The CMS is based on BluePlanet General Content Management System(BPGCMS). BPGCMS allows effective developing with the modularized components. It also ensures the usability and consistency.', img_url: '/temp/img/epa/bpgcms.png', alt: 'bpgcms' },
+        { type: "image", heading: 'Search and filter', content: 'Flexible search and filter interface allow users to find target dataset by keywords, categories, tag, etc.', img_url: '/temp/img/epa/epa_search.png', size: 'l', alt: 'search screen' },
+        { type: "image", heading: 'Accessibility', content: 'The platform has level AA web content accessibility, enabling the usage of keyboards and screen readers.', img_url: '/temp/img/epa/epa_sitemap.png', size: 'l', alt: 'sitemap' },
+        { type: "image", heading: 'Content management system', content: 'The CMS is based on BluePlanet General Content Management System(BPGCMS). BPGCMS allows effective developing with the modularized components. It also ensures the usability and consistency.', img_url: '/temp/img/epa/bpgcms.png', size: 'l', alt: 'bpgcms' },
       ]
     ],
     related_links: [
-      { label: "Launch Website", href: "https://data.moenv.gov.tw/en", type: "primary", icon: "material-symbols-light:open-in-new-rounded" },
+      { label: "Visit EPA Open Platform", href: "https://data.moenv.gov.tw/en", type: "primary", icon: "material-symbols-light:open-in-new-rounded" },
+    ]
+  },
+  {
+    id: "Taipei_Citizen_Dashboard",
+    title: "Taipei Citizen Dashboard",
+    category: "Front-end",
+    abstract: "While working at BluePlanet Inc., I collaborated with our RD leader on the Taipei Citizen Dashboard project. In addition to fetching data and building the website with Nuxt, I was responsible for writing the API specifications. The charts on the website were created using BluePlanet's in-house chart plugin, Bpchart.",
+    metadata: [
+      { label: "Project Timeline and Team", content: "2021 - 2023. A team consisting of project managers, a designer, a front-end developer, and a back-end developer."},
+      { label: "My Role", content: "Front-end development of the website and Writing API specification"},
+      { label: "Techniques", content: "Nuxt2, TypeScript" }
+    ],
+    tags: [ "Nuxt", "Charts" ],
+    gallery: [
+      { url: '/temp/img/dashboard/dashboard_4charts.png', alt: '' },
+      { url: '/temp/img/dashboard/dashboard_airmap.png', alt: '' },
+      { url: '/temp/img/dashboard/dashboard_bubble.png', alt: '' },
+      { url: '/temp/img/dashboard/dashboard_chart1.png', alt: '' },
+      { url: '/temp/img/dashboard/dashboard_chart2.png', alt: '' },
+      { url: '/temp/img/dashboard/dashboard_echarts.png', alt: '' },
+      { url: '/temp/img/dashboard/dashboard_hotspot.png', alt: '' },
+      { url: '/temp/img/dashboard/dashboard_map.png', alt: '' },
+      { url: '/temp/img/dashboard/dashboard_tabble.png', alt: '' },
+      { url: '/temp/img/dashboard/dashboard_pyramid.png', alt: '' },
+    ],
+    article_blocks: [
+      [
+        { type: "heading1", content: 'Key Features' },
+        { type: "heading2", content: 'Various charts by Bpchart & Echarts' },
+        { type: 'paragraph', content: 'The majority of charts in the Taipei Citizen Dashboard were created using BpChart, an in-house chart plugin developed by BluePlanet Inc., while a few others utilized ECharts.js.' },
+        { type: "image", img_url: '/temp/img/dashboard/dashboard_chart1.png', size: 'l', alt: 'The pie chart and bar and line graph by Bpchart' },
+        { type: "image", img_url: '/temp/img/dashboard/dashboard_chart2.png', size: 'l', alt: 'The line chart and bar chart by Bpchart' },
+        { type: "image", img_url: '/temp/img/dashboard/dashboard_echarts.png', size: 'l', alt: 'The treemap by Echarts' },
+        { type: "heading2", content: 'Graphical information layered on a leaflet map' },
+        { type: "paragraph", content: 'Maps using Leaflet as the base visualizes target locations with points, lines, and areas based on the data type, accompanied by info cards that provide detailed information.' },
+        { type: "image", img_url: '/temp/img/dashboard/dashboard_map.png', size: 'l', alt: 'the Taipei City map with road construction info' },
+        { type: "heading2", content: 'Interactive svg ward map' },
+        { type: "paragraph", content: 'SVG ward maps with interactive elements that display information for each ward, as well as for the entire Taipei City.' },
+        { type: "image", img_url: '/temp/img/dashboard/dashboard_svg.png', size: 'l', alt: 'Taipei City ward map on Youbike 2.0 info' },
+      ]
+    ],
+    related_links: [
+      { label: "Visit Taipei Citizen Dashboard", href: "https://dashboard.gov.taipei/", type: "primary", icon: "material-symbols-light:open-in-new-rounded" },
     ]
   }
 ]

@@ -135,6 +135,9 @@ $margin-lr-sm: 16px;
   svg{
     vertical-align: text-top;
   }
+  &:hover{
+    background-color: var(--color-btn-bg-hover);
+  }
 }
 
 .brief_card_tag{

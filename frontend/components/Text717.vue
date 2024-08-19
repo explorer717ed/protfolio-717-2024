@@ -1,6 +1,6 @@
 <template>
   <div class="about_link" data-MagneticBtn>
-    <span class="subtitle">Frontend Developer</span><br>
+    <span class="subtitle">Front-end Developer</span><br>
     <NuxtLink to="/about" class="text717">
       <span class="text717_text">717</span>
       <svg width="100%" height="11" viewBox="0 0 435 11" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">

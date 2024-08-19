@@ -63,9 +63,9 @@
       </section>
       <section class="page_content brief_section transition_slide--right">
         <div class="brief_card">
-          <button @click="goBack" class="brief_back_btn parallax"  data-depth='2' data-MagneticBtn><Icon title="Go back" name="material-symbols-light:arrow-back-rounded"/></button>
-          <div class="brief_card_tag parallax"  data-depth='1'>{{ article?.category }}</div>
-          <div class="brief_card-content parallax"  data-depth='1.5'>
+          <button @click="goBack" class="brief_back_btn parallax" data-MagneticBtn><Icon title="Go back" name="material-symbols-light:arrow-back-rounded"/></button>
+          <div class="brief_card_tag parallax">{{ article?.category }}</div>
+          <div class="brief_card-content parallax">
             <h1>{{ article?.title }}</h1>
             <ul class="brief_feature">
               <li v-for="item in article.metadata" class="brief_feature_item">
@@ -127,11 +127,9 @@
             </div>
             <h3 v-else-if="block.type === 'heading2'" class="article_section-heading2">{{ block.content }}</h3>
             <div v-else-if="['video', 'image'].includes(block.type)" class="article-image_block">
-              <h3 class="article_section-heading2">{{ block.heading }}</h3>
-              <div class="image_block-content article_p" v-html="block.content"></div>
               <div :class="{'image_block-image_frame': true, 'image_block-image_frame--large': block.size == 'l'}">
                 <div class="image_block-image_wrap">
-                  <video v-if="block.type === 'video'" class="image_block-image" :src="block.video_url" :controls="false" autoplay muted loop ></video>
+                  <video v-if="block.type === 'video'" class="image_block-image" :src="block.video_url" autoplay muted loop defaultMuted playsinline oncontextmenu="return false;" preload="auto" ></video>
                   <img v-else-if="block.type === 'image'" class="image_block-image" :src="block.img_url" :alt="block.alt">
                 </div>
               </div>
@@ -186,7 +184,6 @@
 import { worksDetail } from "~/utils/data";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger) 
 
 const router = useRouter()
 const route = useRoute()
@@ -364,9 +361,10 @@ const animateImg = () => {
 
 
 onMounted(()=>{
+  gsap.registerPlugin(ScrollTrigger) 
 
   animateGallery()
-  animateDepth()
+  // animateDepth()
   animateImg()
 
   useLenis()
@@ -380,7 +378,7 @@ onMounted(()=>{
 
 
 .brief_section{
-  padding-bottom: 200vh;
+  padding-bottom: 150vh;
 }
 .work_article-wrap{
   background: var(--color-bg);
