@@ -3,7 +3,7 @@
     @click="copyURI"
     :class="`btn-round-icon btn_mail ${isShowMsgCopy ? 'btn_mail--copied' : ''}`"
     data-MagneticBtn
-    :title="`Cope e-mail ${address}`"
+    :title="`Copy e-mail ${address}`"
   >
     <Icon class="btn_icon-main" name="material-symbols-light:mail-outline-rounded"/>
     <Icon class="btn_icon-copy" name="material-symbols-light:content-copy-outline-rounded"/>

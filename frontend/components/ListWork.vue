@@ -105,11 +105,4 @@ onMounted(()=>{
   padding: 20px;
 }
 
-@media (hover: hover) {
-  /* when hover is supported */
-  a:hover {
-    color: white;
-    background: black;
-  }
-}
 </style>
