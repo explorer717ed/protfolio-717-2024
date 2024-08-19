@@ -363,9 +363,14 @@ const animateImg = () => {
 onMounted(()=>{
   gsap.registerPlugin(ScrollTrigger) 
 
-  animateGallery()
+  // Preload images
+  preloadImages('.column__item-img').then(() => {
+      document.body.classList.remove('loading');
+      animateGallery()
+      animateImg()
+      
+  });
   // animateDepth()
-  animateImg()
 
   useLenis()
 

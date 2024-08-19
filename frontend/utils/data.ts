@@ -18,15 +18,15 @@ export const worksDetail: Work[] = [
     abstract: "An UX team project in Victoria University of Wellington, cooperating with the Ministry of Justice, involving information architecture, design system and website design.",
     tags: ['UX Case Study'],
     gallery: [
-      { url: '/temp/img/moj/moj1.png', alt: '' },
+      { url: '/temp/img/moj/moj6.png', alt: '' },
       { url: '/temp/img/moj/moj2.png', alt: '' },
       { url: '/temp/img/moj/moj5.png', alt: '' },
       { url: '/temp/img/moj/moj4.png', alt: '' },
-      { url: '/temp/img/moj/moj6.png', alt: '' },
-      { url: '/temp/img/moj/moj3.png', alt: '' },
+      { url: '/temp/img/moj/moj1.png', alt: '' },
       { url: '/temp/img/moj/moj9.png', alt: '' },
-      { url: '/temp/img/moj/moj8.png', alt: '' },
       { url: '/temp/img/moj/moj11.png', alt: '' },
+      { url: '/temp/img/moj/moj3.png', alt: '' },
+      { url: '/temp/img/moj/moj8.png', alt: '' },
       { url: '/temp/img/moj/moj10.png', alt: '' },
     ],
     article_blocks:[
@@ -38,7 +38,7 @@ export const worksDetail: Work[] = [
         { type: 'heading1', content: 'Problems' },
         { type: 'card', content: `
           <q>I have to jump around a lot (between the website pages), and my attention is in all other places.</q>
-          <p class="quote_cite">~~ participant A</p>`,
+          <p class="quote_cite">-- participant A</p>`,
         },
         { type: 'paragraph', content: 'We conducted a comparative usability testing to identify the pros and cons in both new and old design of the ministry’s website, and the main challenges were identified as bellow:' },
         { type: 'list', content: [
@@ -98,7 +98,7 @@ export const worksDetail: Work[] = [
         { type: "image", img_url: "/temp/img/moj/rename.png", alt:  "Consistent titles" },
         { type: "heading2", content: 'Task-focused pages'},
         { type: 'paragraph', content: 'The necessary information for each task was collected into a single page to avoid extra navigations for users.' },
-        { type: "image", img_url: "/temp/img/moj/stepper.jpg", alt: "Task-focused pages" },
+        { type: "image", img_url: "/temp/img/moj/moj3.png", alt: "Task-focused pages" },
         { type: "heading2", content: 'Self-descriptive links'},
         { type: 'paragraph', content: 'Links were made more self-descriptive so that users can easily understand the destination and purposes of each link, aiding their decision on whether to click.' },
         { type: "image", img_url: "/temp/img/moj/self_desc_link.png", alt: "Self-descriptive links" },
@@ -155,7 +155,7 @@ export const worksDetail: Work[] = [
       ]
     ],
     related_links: [
-      { label: "Launch Website", href: "", type: "primary", icon: "material-symbols-light:open-in-new-rounded" },
+      { label: "Launch Website", href: "https://kronosresearch.com/", type: "primary", icon: "material-symbols-light:open-in-new-rounded" },
     ]
   },
   {
@@ -184,9 +184,15 @@ export const worksDetail: Work[] = [
     article_blocks: [
       [
         { type: "heading1", content: 'Key Features' },
-        { type: "image", heading: 'Search and filter', content: 'Flexible search and filter interface allow users to find target dataset by keywords, categories, tag, etc.', img_url: '/temp/img/epa/epa_search.png', size: 'l', alt: 'search screen' },
-        { type: "image", heading: 'Accessibility', content: 'The platform has level AA web content accessibility, enabling the usage of keyboards and screen readers.', img_url: '/temp/img/epa/epa_sitemap.png', size: 'l', alt: 'sitemap' },
-        { type: "image", heading: 'Content management system', content: 'The CMS is based on BluePlanet General Content Management System(BPGCMS). BPGCMS allows effective developing with the modularized components. It also ensures the usability and consistency.', img_url: '/temp/img/epa/bpgcms.png', size: 'l', alt: 'bpgcms' },
+        { type: "heading2", content: 'Search and filter' },
+        { type: 'paragraph', content: 'Flexible search and filter interface allow users to find target dataset by keywords, categories, tag, etc.' },
+        { type: "image", img_url: '/temp/img/epa/epa_search.png', size: 'l', alt: 'search screen' },
+        { type: "heading2", content: 'Accessibility' },
+        { type: 'paragraph', content: 'The platform has level AA web content accessibility, enabling the usage of keyboards and screen readers.' },
+        { type: "image", img_url: '/temp/img/epa/epa_sitemap.png', size: 'l', alt: 'sitemap' },
+        { type: "heading2", content: 'Content management system' },
+        { type: 'paragraph', content: 'The CMS is based on BluePlanet General Content Management System(BPGCMS). BPGCMS allows effective developing with the modularized components. It also ensures the usability and consistency.' },
+        { type: "image", img_url: '/temp/img/epa/bpgcms.png', size: 'l', alt: 'bpgcms' },
       ]
     ],
     related_links: [
