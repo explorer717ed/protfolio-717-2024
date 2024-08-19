@@ -69,7 +69,8 @@ export default class MenuItem {
     calcBounds() {
         this.bounds = {
             el: this.DOM.el.getBoundingClientRect(),
-            reveal: this.DOM.reveal.getBoundingClientRect()
+            reveal: this.DOM.reveal.getBoundingClientRect(),
+            preview: this.DOM.previewArea.getBoundingClientRect()
         };
     }
     // bind some events
@@ -179,7 +180,7 @@ export default class MenuItem {
         // new translation values
         // the center of the image element is positioned where the mouse is
         this.animatableProperties.tx.current = Math.abs(mousepos.x - this.bounds.el.left ) ;
-        this.animatableProperties.ty.current = Math.abs(mousepos.y - this.bounds.el.height) ;
+        this.animatableProperties.ty.current = Math.abs(mousepos.y - (this.bounds.el.height * 0.5) - this.bounds.preview.y) ;
         // new rotation value
         this.animatableProperties.rotation.current = this.firstRAFCycle ? 0 : map(mouseDistanceX,0,100,0,direction.x < 0 ? 60 : -60);
         // new filter value
