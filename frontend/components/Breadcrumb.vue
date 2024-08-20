@@ -28,25 +28,25 @@ defineProps({
   }
 })
 
-const elBreadcrumb = ref<HTMLDivElement>()
+// const elBreadcrumb = ref<HTMLDivElement>()
 
 const isClipped = ref(false)
 
-const onResizeClip: ResizeObserverCallback = (entries) => {
-  for (const entry of entries) {
-    const bufferSize = 50
-    if(entry.target.offsetWidth < (entry.target.scrollWidth - bufferSize)){
-      entry.target.classList.add('breadcrumb--clip')
-    }else{
-      entry.target.classList.remove('breadcrumb--clip')
-    }
-  }
-}
+// const onResizeClip: ResizeObserverCallback = (entries) => {
+//   for (const entry of entries) {
+//     const bufferSize = 50
+//     if(entry.target.offsetWidth < (entry.target.scrollWidth - bufferSize)){
+//       entry.target.classList.add('breadcrumb--clip')
+//     }else{
+//       entry.target.classList.remove('breadcrumb--clip')
+//     }
+//   }
+// }
 
-onMounted(()=>{
-  const resizeObserver = new ResizeObserver(onResizeClip);
-  if(elBreadcrumb.value) resizeObserver.observe(elBreadcrumb.value)
-})
+// onMounted(()=>{
+//   const resizeObserver = new ResizeObserver(onResizeClip);
+//   if(elBreadcrumb.value) resizeObserver.observe(elBreadcrumb.value)
+// })
 
 </script>
 
@@ -71,24 +71,24 @@ onMounted(()=>{
   }
 
   position: relative;
-  &.breadcrumb--clip{
-    border-right: none;
-    padding: 10px 30px 10px 15px;
-    & ::after{
-      content: '';
-      position: absolute;
-      display: block;
-      height: 100%;
-      aspect-ratio: 1 / 1;
-      border: var(--color-text) 1px solid;
-      transform-origin: center;
-      transform:  translateX(55%);
-      border-radius: 100%;
-      right: 0;
-      top: -1px;
-      z-index: 10;
-    }
-  }
+  // &.breadcrumb--clip{
+  //   border-right: none;
+  //   padding: 10px 30px 10px 15px;
+  //   & ::after{
+  //     content: '';
+  //     position: absolute;
+  //     display: block;
+  //     height: 100%;
+  //     aspect-ratio: 1 / 1;
+  //     border: var(--color-text) 1px solid;
+  //     transform-origin: center;
+  //     transform:  translateX(55%);
+  //     border-radius: 100%;
+  //     right: 0;
+  //     top: -1px;
+  //     z-index: 10;
+  //   }
+  // }
 }
 
 .breadcrumb_link a{
