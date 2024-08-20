@@ -46,7 +46,6 @@
     </div>
     <section class="section_works transition_slide--right">
       <ListWork class="works_list"></ListWork>
-      <ContactMsg class="wrap_contact bg-dot"/>
     </section>
   </main>
 </template>

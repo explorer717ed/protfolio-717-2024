@@ -19,6 +19,7 @@
       <div class="toolbar-contact">
         <BtnMail/>
         <BtnLi/>
+        <BtnGit/>
       </div>
     </section>
   </main>

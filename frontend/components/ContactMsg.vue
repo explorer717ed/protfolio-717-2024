@@ -7,6 +7,7 @@
     <div class="toolbar_contact">
       <BtnMail/>
       <BtnLi/>
+      <BtnGit/>
     </div>
   </div>
 </template>
