@@ -16,6 +16,7 @@
     "imagesloaded": "^5.0.0",
     "lenis": "^1.1.9",
     "nuxt": "^3.11.2",
+    "nuxt-gtag": "^2.1.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },

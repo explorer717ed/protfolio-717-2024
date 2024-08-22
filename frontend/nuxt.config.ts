@@ -53,11 +53,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules:[
-    '@nuxtjs/color-mode',
-    'nuxt-icon',
-    '@nuxtjs/device',
-  ],
+  modules:['@nuxtjs/color-mode', 'nuxt-icon', '@nuxtjs/device', "nuxt-gtag"],
 
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
@@ -68,6 +64,10 @@ export default defineNuxtConfig({
     // classPrefix: '',
     // classSuffix: '-mode',
     // storageKey: 'nuxt-color-mode'
+  },
+
+  gtag: {
+    id: 'G-4NSEJ69QF6'
   }
 
 })
